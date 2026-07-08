@@ -2,12 +2,148 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>WDD231</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WDD231 | Ronald Ongom | Home</title>
+
+    <meta name="description"
+        content="WDD231 Course Home Page for Ronald Ongom showcasing web development assignments, projects and programming courses.">
+
+    <meta name="author" content="Ronald Ongom">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+
 </head>
 
 <body>
-  <h1>Welcome to WDD 231</h1>
+
+    <header>
+
+        <div class="logo">
+
+            <img src="images/logo.svg" alt="Website Logo" width="60" height="60">
+
+            <span>Ronald Ongom</span>
+
+        </div>
+
+        <button id="menuButton" aria-label="Open navigation menu">
+            ☰
+        </button>
+
+        <nav id="navigation">
+
+            <a href="index.html" class="active" aria-current="page">Home</a>
+
+            <a href="chamber/">Chamber</a>
+
+            <a href="final/">Final</a>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <h1>Home</h1>
+
+        <div class="grid">
+
+            <section class="card">
+
+                <h2>About Me</h2>
+
+                <p>
+
+                    My name is Ronald Ongom from Uganda.
+
+                    I am pursuing a Software Development degree through BYU–Pathway Worldwide.
+
+                    I enjoy web development, software engineering, networking and cybersecurity.
+
+                </p>
+
+            </section>
+
+            <section class="card">
+
+                <h2>Student Photo</h2>
+
+                <img src="images/profile.webp" alt="Ronald Ongom" loading="lazy">
+
+            </section>
+
+        </div>
+
+        <section class="certificate">
+
+            <h2>Web & Computer Programming Certificate</h2>
+
+            <div class="buttons">
+
+                <button id="all">All Courses</button>
+
+                <button id="wdd">WDD Courses</button>
+
+                <button id="cse">CSE Courses</button>
+
+            </div>
+
+            <div id="courses"></div>
+
+            <p id="credits"></p>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="social">
+
+            <a href="https://github.com/RonaldOngom" target="_blank" rel="noopener noreferrer"
+                aria-label="Visit Ronald Ongom's GitHub Profile">
+                GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/ongom-ronald-2a228717b" target="_blank" rel="noopener noreferrer"
+                aria-label="Visit Ronald Ongom's LinkedIn Profile">
+                LinkedIn
+            </a>
+
+            <a href="mailto:apostleronaldongom@outlook.com" aria-label="Send an email to Ronald Ongom">
+                Email
+            </a>
+
+        </div>
+
+        <p>
+
+            ©
+
+            <span id="currentyear"></span>
+
+            Ronald Ongom | Uganda
+
+        </p>
+
+        <p id="lastModified"></p>
+
+    </footer>
+
 </body>
 
 </html>

@@ -1,0 +1,115 @@
+/* ==========================================
+   WDD231 - Desktop Styles
+   Applies to screens 768px and larger
+========================================== */
+
+@media only screen and (min-width: 768px) {
+
+    /* ---------- Header ---------- */
+
+    header {
+        padding: 1rem 2rem;
+    }
+
+    #menuButton {
+        display: none;
+    }
+
+    nav {
+        display: flex !important;
+        flex-direction: row;
+        width: auto;
+        margin-top: 0;
+        gap: .75rem;
+    }
+
+    nav a {
+        padding: .8rem 1.2rem;
+        border-radius: 8px;
+        transition: background .3s ease, color .3s ease;
+    }
+
+    nav a:hover {
+        background: var(--accent);
+        color: #000;
+    }
+
+    /* ---------- Main ---------- */
+
+    main {
+        padding: 2rem;
+    }
+
+    h1 {
+        margin-bottom: 2rem;
+    }
+
+    /* About + Photo */
+
+    .grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        align-items: stretch;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .card img {
+        width: 100%;
+        max-width: 300px;
+        margin: auto;
+        border-radius: 12px;
+    }
+
+    /* ---------- Certificate ---------- */
+
+    .certificate {
+        margin-top: 2.5rem;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    #courses {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .course-card {
+
+        transition: .3s ease;
+
+        cursor: default;
+    }
+
+    .course-card:hover {
+
+        transform: translateY(-5px);
+
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+
+    }
+
+    /* ---------- Footer ---------- */
+
+    footer {
+
+        margin-top: 3rem;
+
+    }
+
+    .social {
+
+        gap: 2rem;
+
+    }
+
+}

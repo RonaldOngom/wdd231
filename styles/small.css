@@ -1,0 +1,320 @@
+/* ------------------------------
+   Global Styles
+-------------------------------*/
+
+:root {
+    --primary: #0f4c81;
+    --secondary: #2c7be5;
+    --accent: #f4b400;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --success: #2e7d32;
+    --completed: #dcedc8;
+
+    --radius: 12px;
+    --shadow: 0 4px 12px rgba(0, 0, 0, .1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ------------------------------
+ Header
+-------------------------------*/
+
+header {
+    background: var(--primary);
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.logo span {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* ------------------------------
+ Navigation
+-------------------------------*/
+
+#menuButton {
+
+    background: none;
+    border: none;
+
+    color: white;
+
+    font-size: 2rem;
+
+    cursor: pointer;
+}
+
+nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+nav.open {
+    display: flex;
+}
+
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: .8rem;
+
+    border-radius: 6px;
+
+    transition: .3s;
+}
+
+nav a:hover {
+
+    background: rgba(255, 255, 255, .2);
+
+}
+
+.active {
+
+    background: var(--accent);
+
+    color: black;
+
+}
+
+/* ------------------------------
+ Main
+-------------------------------*/
+
+main {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 1rem;
+}
+
+h1 {
+
+    margin: 1rem 0;
+
+}
+
+.grid {
+
+    display: grid;
+
+    gap: 1rem;
+}
+
+.card {
+
+    background: white;
+
+    border-radius: var(--radius);
+
+    padding: 1.5rem;
+
+    box-shadow: var(--shadow);
+
+}
+
+.card h2 {
+
+    margin-bottom: .8rem;
+
+    color: var(--primary);
+
+}
+
+.card img {
+
+    border-radius: 10px;
+
+}
+
+/* ------------------------------
+ Certificate Section
+-------------------------------*/
+
+.certificate {
+
+    margin-top: 2rem;
+
+    background: white;
+
+    padding: 1.5rem;
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+}
+
+.buttons {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: .8rem;
+
+    margin: 1rem 0;
+
+}
+
+.buttons button {
+
+    border: none;
+
+    background: var(--secondary);
+
+    color: white;
+
+    padding: .7rem 1.2rem;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.buttons button:hover {
+
+    background: var(--primary);
+
+}
+
+#courses {
+
+    display: grid;
+
+    gap: .8rem;
+
+}
+
+.course-card {
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 1rem;
+
+    text-align: center;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .1);
+
+    transition: .3s;
+
+}
+
+.course-card h3 {
+
+    color: var(--primary);
+
+    margin-bottom: .5rem;
+
+}
+
+.course-card:hover {
+
+    transform: translateY(-4px);
+
+}
+
+.completed {
+
+    background: #d8f5d3;
+
+    border-left: 8px solid #2e7d32;
+
+}
+
+/* ------------------------------
+ Footer
+-------------------------------*/
+
+footer {
+
+    margin-top: 2rem;
+
+    background: var(--primary);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 2rem 1rem;
+
+}
+
+.social {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 1rem;
+
+    margin-bottom: 1rem;
+
+}
+
+.social a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+}
+
+.social a:hover {
+
+    color: var(--accent);
+
+}
+
+#credits {
+
+    margin-top: 1rem;
+
+    font-weight: bold;
+
+}
