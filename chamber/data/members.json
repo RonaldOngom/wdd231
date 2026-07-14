@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Lira Tech Solutions",
+    "address": "Plot 12 Bala Road, Lira City, Uganda",
+    "phone": "+256 772 111111",
+    "website": "https://www.liratechsolutions.com",
+    "image": "lira-tech.webp",
+    "membership": 3,
+    "industry": "Information Technology",
+    "description": "Provides software development, networking, cybersecurity, and IT consulting services.",
+    "email": "info@liratechsolutions.com",
+    "founded": 2018
+  },
+  {
+    "name": "Northern Farmers Cooperative",
+    "address": "Oyam Road, Lira City, Uganda",
+    "phone": "+256 772 222222",
+    "website": "https://www.northernfarmers.org",
+    "image": "farmers-cooperative.webp",
+    "membership": 2,
+    "industry": "Agriculture",
+    "description": "Supports local farmers through training, marketing, and agricultural development.",
+    "email": "office@northernfarmers.org",
+    "founded": 2012
+  },
+  {
+    "name": "Lira Medical Centre",
+    "address": "Boundary Road, Lira City, Uganda",
+    "phone": "+256 772 333333",
+    "website": "https://www.liramedical.org",
+    "image": "medical-centre.webp",
+    "membership": 3,
+    "industry": "Healthcare",
+    "description": "Modern healthcare facility offering outpatient, maternity, laboratory, and emergency services.",
+    "email": "contact@liramedical.org",
+    "founded": 2010
+  },
+  {
+    "name": "Kairos Waves Technologies",
+    "address": "Lira City West Division, Uganda",
+    "phone": "+256 772 444444",
+    "website": "https://www.kairoswaves.com",
+    "image": "kairos-waves.webp",
+    "membership": 3,
+    "industry": "Technology",
+    "description": "Specializes in software development, website design, networking, robotics, and computer maintenance.",
+    "email": "support@kairoswaves.com",
+    "founded": 2024
+  },
+  {
+    "name": "Lango Hotel",
+    "address": "Akii-Bua Road, Lira City, Uganda",
+    "phone": "+256 772 555555",
+    "website": "https://www.langohotel.com",
+    "image": "lango-hotel.webp",
+    "membership": 2,
+    "industry": "Hospitality",
+    "description": "Offers accommodation, conference facilities, dining, and tourism services.",
+    "email": "reservations@langohotel.com",
+    "founded": 2015
+  },
+  {
+    "name": "Lira Supermarket",
+    "address": "Market Street, Lira City, Uganda",
+    "phone": "+256 772 666666",
+    "website": "https://www.lirasupermarket.com",
+    "image": "supermarket.webp",
+    "membership": 1,
+    "industry": "Retail",
+    "description": "A one-stop shopping destination for groceries, electronics, and household products.",
+    "email": "sales@lirasupermarket.com",
+    "founded": 2016
+  },
+  {
+    "name": "Northern Uganda Bank",
+    "address": "Main Street, Lira City, Uganda",
+    "phone": "+256 772 777777",
+    "website": "https://www.nubank.ug",
+    "image": "bank.webp",
+    "membership": 3,
+    "industry": "Financial Services",
+    "description": "Provides banking, loans, savings, investment, and mobile banking services.",
+    "email": "customerservice@nubank.ug",
+    "founded": 2005
+  }
+]

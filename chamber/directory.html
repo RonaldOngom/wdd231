@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lira City Chamber of Commerce | Business Directory</title>
+
+    <meta name="description"
+        content="Official business directory for the Lira City Chamber of Commerce. Discover local businesses, services, and organizations in Northern Uganda.">
+
+    <meta name="author" content="Ongom Ronald">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Lira City Chamber of Commerce">
+    <meta property="og:description"
+        content="Explore businesses and organizations that make Lira City a vibrant place to live, work, and invest.">
+    <meta property="og:image"
+        content="https://yourusername.github.io/wdd231/chamber/images/og-image.webp">
+    <meta property="og:url"
+        content="https://yourusername.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+    <!-- Normalize -->
+    <link rel="stylesheet" href="styles/normalize.css">
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header>
+
+<div class="logo-area">
+
+<img src="images/logo.svg"
+     alt="Lira City Chamber Logo"
+     width="80"
+     height="80">
+
+<div>
+
+<h1>Lira City Chamber of Commerce</h1>
+
+<p>Connecting Businesses • Growing Communities</p>
+
+</div>
+
+</div>
+
+<button id="menuButton"
+aria-label="Toggle Navigation">
+
+☰
+
+</button>
+
+<nav>
+
+<ul id="primaryNav">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="directory.html">Directory</a></li>
+
+<li><a href="discover.html">Discover</a></li>
+
+<li><a href="join.html">Join</a></li>
+
+<li><a href="thankyou.html">Thank You</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<main id="main-content">
+
+<section class="hero">
+
+<h2>Business Directory</h2>
+
+<p>
+
+Discover trusted businesses, organizations, and service providers that
+are members of the Lira City Chamber of Commerce.
+
+</p>
+
+</section>
+
+<section class="view-controls">
+
+<button id="gridView">
+
+⬛ Grid View
+
+</button>
+
+<button id="listView">
+
+📋 List View
+
+</button>
+
+</section>
+
+<section
+id="directory"
+class="grid">
+
+<!-- Member cards inserted here dynamically -->
+
+</section>
+
+</main>
+
+<footer>
+
+<div class="footer-contact">
+
+<h3>Lira City Chamber of Commerce</h3>
+
+<p>Coronation Road</p>
+
+<p>Lira City, Uganda</p>
+
+<p>info@lirachamber.org</p>
+
+<p>+256 772 123456</p>
+
+</div>
+
+<div class="footer-social">
+
+<a href="#" aria-label="Facebook">
+
+<img src="images/facebook.svg"
+alt="Facebook"
+width="32"
+height="32">
+
+</a>
+
+<a href="#" aria-label="LinkedIn">
+
+<img src="images/linkedin.svg"
+alt="LinkedIn"
+width="32"
+height="32">
+
+</a>
+
+<a href="#" aria-label="X">
+
+<img src="images/x.svg"
+alt="X"
+width="32"
+height="32">
+
+</a>
+
+</div>
+
+<div class="footer-info">
+
+<p>
+
+&copy;
+<span id="year"></span>
+Lira City Chamber of Commerce
+
+</p>
+
+<p>
+
+Ongom Ronald | WDD 231
+
+</p>
+
+<p>
+
+Last Modification:
+<span id="lastModified"></span>
+
+</p>
+
+</div>
+
+</footer>
+
+</body>
+</html>

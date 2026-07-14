@@ -1,0 +1,170 @@
+/* ============================================
+   Lira City Chamber of Commerce
+   Desktop Styles
+   ============================================ */
+
+@media only screen and (min-width: 768px) {
+
+    /* ---------- Header ---------- */
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+    .logo-area {
+        padding: 1rem 0;
+    }
+
+    /* ---------- Hide Hamburger ---------- */
+
+    #menuButton {
+        display: none;
+    }
+
+    /* ---------- Navigation ---------- */
+
+    nav ul {
+        display: flex;
+        gap: .5rem;
+    }
+
+    nav li {
+        border: none;
+    }
+
+    nav a {
+        padding: 1rem 1.25rem;
+        border-radius: 6px;
+        transition: background .3s ease;
+    }
+
+    nav a:hover {
+        background: var(--secondary);
+    }
+
+    /* ---------- Hero ---------- */
+
+    .hero {
+        padding: 3rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    /* ---------- Directory Grid ---------- */
+
+    #directory.grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    /* ---------- Cards ---------- */
+
+    .member-card {
+        transition: transform .3s,
+                    box-shadow .3s;
+    }
+
+    .member-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0,0,0,.15);
+    }
+
+    .member-card img {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* ---------- List View ---------- */
+
+    #directory.list .member-card {
+        display: grid;
+        grid-template-columns:
+            2fr
+            2fr
+            2fr
+            2fr
+            1fr;
+        align-items: center;
+        gap: 1rem;
+        text-align: left;
+        padding: 1rem 2rem;
+    }
+
+    #directory.list .member-card h3,
+    #directory.list .member-card p,
+    #directory.list .member-card a {
+        margin: 0;
+    }
+
+    #directory.list .member-card img {
+        display: none;
+    }
+
+    /* ---------- Footer ---------- */
+
+    footer {
+        display: grid;
+        grid-template-columns:
+            repeat(3,1fr);
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-contact,
+    .footer-social,
+    .footer-info {
+        padding: 1rem;
+    }
+
+    .footer-info {
+        text-align: right;
+    }
+
+    .footer-contact {
+        text-align: left;
+    }
+
+    .home-grid {
+        grid-template-columns:
+            1fr 1fr 1fr;
+    }
+
+    .hero-text {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        max-width: 450px;
+    }
+
+    .discover-grid {
+        grid-template-columns:
+            repeat(auto-fit,minmax(320px,1fr));
+    }
+
+    /* Join Page */
+
+    .join-container {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+
+    .membership-cards {
+        position: sticky;
+        top: 1rem;
+    }
+
+}

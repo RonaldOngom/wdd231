@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="90" fill="#0b4f6c"></circle>
+    <circle cx="100" cy="100" r="75" fill="#1b998b"></circle>
+    <text x="100" y="95" text-anchor="middle" fill="white" font-size="32" font-family="Arial" font-weight="bold">
+        LC
+    </text>
+    <text x="100" y="125" text-anchor="middle" fill="white" font-size="14" font-family="Arial">
+        Chamber
+    </text>
+</svg>
