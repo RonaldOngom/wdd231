@@ -69,20 +69,7 @@
 
     /* ---------- Cards ---------- */
 
-    .member-card {
-        transition: transform .3s,
-                    box-shadow .3s;
-    }
-
-    .member-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 10px 25px rgba(0,0,0,.15);
-    }
-
-    .member-card img {
-        width: 200px;
-        height: 200px;
-    }
+    /* Desktop cards inherit mobile base styles and only adjust layout here. */
 
     /* ---------- List View ---------- */
 
@@ -100,14 +87,14 @@
         padding: 1rem 2rem;
     }
 
+    #directory.list .member-card {
+        text-align: left;
+    }
+
     #directory.list .member-card h3,
     #directory.list .member-card p,
     #directory.list .member-card a {
         margin: 0;
-    }
-
-    #directory.list .member-card img {
-        display: none;
     }
 
     /* ---------- Footer ---------- */

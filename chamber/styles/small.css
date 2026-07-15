@@ -6,21 +6,28 @@
 /* ---------- Root Variables ---------- */
 :root {
     --primary: #0b4f6c;
+    --primary-rgb: 11,79,108;
     --secondary: #1b998b;
     --accent: #f4a261;
+    --gold: #f4c542;
     --light: #f8f9fa;
+    --surface: #ffffff;
+    --surface-light: #f8f9fa;
     --dark: #222222;
     --white: #ffffff;
+    --black: #000000;
+    --text: #000000;
+    --muted: #333333;
     --border: #d9d9d9;
-
+    --border-muted: #cccccc;
+    --shadow: 0 2px 8px rgba(0,0,0,.08);
+    --shadow-strong: 0 10px 25px rgba(0,0,0,.15);
     --max-width: 1200px;
-
     --heading-font: 'Poppins', Arial, Helvetica, sans-serif;
     --body-font: 'Poppins', Verdana, Geneva, sans-serif;
 }
 
 /* ---------- Reset ---------- */
-
 *,
 *::before,
 *::after {
@@ -31,7 +38,6 @@
 }
 
 /* ---------- Body ---------- */
-
 body {
     margin: 0;
     font-family: var(--body-font);
@@ -44,8 +50,8 @@ body {
     position: absolute;
     left: -9999px;
     top: 0;
-    background: #000;
-    color: #fff;
+    background: var(--black);
+    color: var(--white);
     padding: 1rem;
     z-index: 1000;
 }
@@ -59,20 +65,19 @@ button:focus,
 input:focus,
 select:focus,
 textarea:focus {
-    outline: 3px solid #f4a261;
+    outline: 3px solid var(--accent);
     outline-offset: 3px;
 }
 
 /* ---------- Images ---------- */
-
 img {
     max-width: 100%;
     display: block;
 }
 
 /* ---------- Header ---------- */
-
-header {
+header,
+footer {
     background: var(--primary);
     color: white;
 }
@@ -95,7 +100,6 @@ header {
 }
 
 /* ---------- Navigation ---------- */
-
 #menuButton {
     width: 100%;
     border: none;
@@ -121,7 +125,8 @@ nav li {
     border-top: 1px solid rgba(255,255,255,.15);
 }
 
-nav a {
+nav a,
+footer a {
     display: block;
     color: white;
     text-decoration: none;
@@ -140,31 +145,53 @@ nav a:hover {
 }
 
 /* ---------- Main ---------- */
-
 main {
     max-width: var(--max-width);
     margin: auto;
     padding: 1rem;
 }
 
-/* ---------- Hero ---------- */
-
-.hero {
-    background: white;
-    padding: 2rem;
+.hero,
+.member-card,
+.card,
+.discover-card,
+.spotlight-card,
+form,
+.membership-card,
+.thank-you {
+    background: var(--surface);
     border-radius: 10px;
-    text-align: center;
-    margin-bottom: 2rem;
-    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    box-shadow: var(--shadow);
 }
 
-.hero h2 {
-    margin-top: 0;
+/* ---------- Hero ---------- */
+.hero {
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero h2,
+.card h2,
+.discover-card h3,
+.member-card h3,
+.spotlight-card h3,
+.membership-card h3 {
     color: var(--primary);
 }
 
-/* ---------- View Buttons ---------- */
+.hero h2,
+.card h2,
+.spotlight-card h3,
+.membership-card h3 {
+    margin-top: 0;
+}
 
+.member-card h3 {
+    margin-top: 1rem;
+}
+
+/* ---------- View Buttons ---------- */
 .view-controls {
     display: flex;
     justify-content: center;
@@ -172,24 +199,31 @@ main {
     margin-bottom: 2rem;
 }
 
-.view-controls button {
-    background: #0b4f6c;
-    color: white;
-    padding: .9rem 1.4rem;
+.view-controls button,
+.submit-button {
+    background: var(--primary);
+    color: var(--white);
     border: none;
     border-radius: 8px;
     font-size: 1rem;
     cursor: pointer;
-    transition: .3s;
+    transition: background .3s ease;
+}
+
+.view-controls button {
+    padding: .9rem 1.4rem;
+}
+
+.view-controls button:hover,
+.submit-button:hover {
+    background: var(--secondary);
 }
 
 .view-controls button:hover {
-    background: #1b998b;
     transform: scale(1.05);
 }
 
 /* ---------- Directory Grid ---------- */
-
 #directory.grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -197,14 +231,10 @@ main {
 }
 
 /* ---------- Member Cards ---------- */
-
 .member-card {
-    background: white;
-    border-radius: 10px;
     padding: 1rem;
     text-align: center;
     border: 1px solid var(--border);
-    box-shadow: 0 2px 8px rgba(0,0,0,.08);
     transition: transform .3s, box-shadow .3s;
     display: flex;
     flex-direction: column;
@@ -213,7 +243,7 @@ main {
 
 .member-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+    box-shadow: var(--shadow-strong);
 }
 
 .member-card img {
@@ -224,61 +254,64 @@ main {
     border-radius: 50%;
 }
 
-.member-card h3 {
-    color: var(--primary);
-    margin-top: 1rem;
-}
-
 .member-card p {
     margin: .5rem 0;
 }
 
-.member-card a {
-    color: var(--secondary);
+.member-card a,
+.spotlight-card a {
     text-decoration: none;
+    font-weight: bold;
 }
 
-.member-card a:hover {
+.member-card a {
+    color: var(--secondary);
+}
+
+.member-card a:hover,
+.spotlight-card a:hover {
     text-decoration: underline;
 }
 
-.membership {
+.membership,
+.member,
+.silver,
+.gold {
     display: inline-block;
-    margin-top: 1rem;
-    padding: .5rem 1rem;
-    background: #f4a261;
-    color: #000;
     border-radius: 20px;
     font-weight: bold;
+}
+
+.membership {
+    margin-top: 1rem;
+    padding: .5rem 1rem;
+    background: var(--accent);
+    color: var(--text);
     font-size: .9rem;
 }
 
 .member,
 .silver,
 .gold {
-    display: inline-block;
     padding: .35rem .75rem;
-    border-radius: 20px;
-    font-weight: bold;
 }
 
 .member {
-    background: #d9d9d9;
-    color: #333;
+    background: var(--border);
+    color: var(--muted);
 }
 
 .silver {
-    background: #c0c0c0;
-    color: #000;
+    background: var(--border-muted);
+    color: var(--black);
 }
 
 .gold {
-    background: #f4c542;
-    color: #000;
+    background: var(--gold);
+    color: var(--black);
 }
 
 /* ---------- List View ---------- */
-
 #directory.list {
     display: block;
 }
@@ -295,10 +328,7 @@ main {
 }
 
 /* ---------- Footer ---------- */
-
 footer {
-    background: var(--primary);
-    color: white;
     margin-top: 2rem;
     padding: 2rem 1rem;
 }
@@ -318,11 +348,6 @@ footer {
     width: 32px;
 }
 
-footer a {
-    color: white;
-    text-decoration: none;
-}
-
 footer p {
     margin: .4rem 0;
 }
@@ -330,7 +355,6 @@ footer p {
 /* ===========================
    Error Message
 =========================== */
-
 .error {
     text-align: center;
     color: darkred;
@@ -341,7 +365,6 @@ footer p {
 /* ===============================
    HOME PAGE
 =================================*/
-
 .home-hero {
     position: relative;
     margin-bottom: 2rem;
@@ -353,8 +376,8 @@ footer p {
 }
 
 .hero-text {
-    background: rgba(11,79,108,.90);
-    color: white;
+    background: rgba(var(--primary-rgb), .9);
+    color: var(--white);
     padding: 1.5rem;
     border-radius: 10px;
     margin-top: 1rem;
@@ -364,46 +387,40 @@ footer p {
     display: inline-block;
     margin-top: 1rem;
     padding: .8rem 1.4rem;
-    background: #f4a261;
-    color: black;
+    background: var(--accent);
+    color: var(--text);
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
 }
 
-.home-grid {
+.home-grid,
+.discover-grid,
+.join-container,
+.membership-cards {
     display: grid;
     gap: 1.5rem;
+}
+
+.home-grid {
     margin: 2rem 0;
 }
 
-.card {
-    background: white;
+.card,
+.discover-card,
+.membership-card {
     padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,.1);
 }
 
 .card h2 {
-    color: #0b4f6c;
     margin-top: 0;
 }
 
 /* ==========================
-DISCOVER PAGE
-==========================*/
-
+   DISCOVER PAGE
+========================== */
 .discover-grid {
-    display: grid;
-    gap: 2rem;
     margin-top: 2rem;
-}
-
-.discover-card {
-    background: white;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,.1);
 }
 
 .discover-card img {
@@ -416,50 +433,35 @@ DISCOVER PAGE
     transform: scale(1.03);
 }
 
-.discover-card h3 {
-    color: #0b4f6c;
-}
-
 /* ==========================
    Spotlight Cards
-==========================*/
-
+========================== */
 .spotlight-card {
-    background: white;
-    padding: 1rem;
     margin-bottom: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,.1);
     text-align: center;
+    padding: 1rem;
 }
 
 .spotlight-card img {
+    display: block;
     margin: auto;
     border-radius: 50%;
     margin-bottom: 1rem;
 }
 
 .spotlight-card h3 {
-    color: #0b4f6c;
     margin-top: 0;
 }
 
 .spotlight-card a {
     display: inline-block;
     margin-top: .75rem;
-    color: #0b4f6c;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.spotlight-card a:hover {
-    text-decoration: underline;
+    color: var(--primary);
 }
 
 /* ==========================
-   Spotlight Cards
-==========================*/
-
+   Animations
+========================== */
 .member-card,
 .discover-card,
 .membership-card,
@@ -472,7 +474,6 @@ DISCOVER PAGE
         opacity: 0;
         transform: translateY(10px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -482,18 +483,12 @@ DISCOVER PAGE
 /* ==========================
    JOIN PAGE
 ========================== */
-
 .join-container {
-    display: grid;
-    gap: 2rem;
     margin: 2rem 0;
 }
 
 form {
-    background: #ffffff;
     padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,.1);
 }
 
 form label {
@@ -508,7 +503,7 @@ form select {
     width: 100%;
     padding: .75rem;
     margin-top: .4rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-muted);
     border-radius: 6px;
     font-size: 1rem;
 }
@@ -518,49 +513,17 @@ form textarea {
 }
 
 .submit-button {
-    background: #0b4f6c;
-    color: #fff;
-    border: none;
     padding: 1rem;
     border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background .3s ease;
-}
-
-.submit-button:hover {
-    background: #1b998b;
-}
-
-.membership-cards {
-    display: grid;
-    gap: 1rem;
-}
-
-.membership-card {
-    background: #ffffff;
-    padding: 1.5rem;
-    border-left: 6px solid #0b4f6c;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,.08);
-}
-
-.membership-card h3 {
-    margin-top: 0;
-    color: #0b4f6c;
 }
 
 /* ==========================
-THANK YOU PAGE
-==========================*/
-
+   THANK YOU PAGE
+========================== */
 .thank-you {
     max-width: 800px;
     margin: auto;
-    background: white;
     padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,.1);
     text-align: center;
 }
 
@@ -568,11 +531,11 @@ THANK YOU PAGE
     margin: 2rem 0;
     text-align: left;
     padding: 1.5rem;
-    background: #f8f9fa;
+    background: var(--surface-light);
     border-radius: 10px;
 }
 
 .application-summary p {
     padding: .5rem 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--border);
 }
