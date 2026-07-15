@@ -15,8 +15,8 @@
 
     --max-width: 1200px;
 
-    --heading-font: Arial, Helvetica, sans-serif;
-    --body-font: Verdana, Geneva, sans-serif;
+    --heading-font: 'Poppins', Arial, Helvetica, sans-serif;
+    --body-font: 'Poppins', Verdana, Geneva, sans-serif;
 }
 
 /* ---------- Reset ---------- */
