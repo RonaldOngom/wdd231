@@ -246,7 +246,7 @@ form,
     justify-content: space-between;
 }
 
-#directory.list .member-card {
+body.chamber-page #directory.list .member-card {
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -254,14 +254,14 @@ form,
     padding: 1rem;
 }
 
-#directory.list .member-card img,
-#directory.list img {
+body.chamber-page #directory.list .member-card img,
+body.chamber-page #directory.list img {
     display: none;
 }
 
-#directory.list .member-card h3,
-#directory.list .member-card p,
-#directory.list .member-card a {
+body.chamber-page #directory.list .member-card h3,
+body.chamber-page #directory.list .member-card p,
+body.chamber-page #directory.list .member-card a {
     margin: 0;
 }
 
@@ -336,7 +336,7 @@ form,
 }
 
 /* ---------- List View ---------- */
-#directory.list {
+body.chamber-page #directory.list {
     display: block;
 }
 
