@@ -74,21 +74,13 @@
     /* ---------- List View ---------- */
 
     #directory.list .member-card {
-        display: grid;
-        grid-template-columns:
-            2fr
-            2fr
-            2fr
-            2fr
-            1fr;
-        align-items: center;
-        gap: 1rem;
+        display: block;
         text-align: left;
-        padding: 1rem 2rem;
+        padding: 1rem 1.25rem;
     }
 
-    #directory.list .member-card {
-        text-align: left;
+    #directory.list .member-card img {
+        display: none;
     }
 
     #directory.list .member-card h3,
@@ -101,8 +93,7 @@
 
     footer {
         display: grid;
-        grid-template-columns:
-            repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
         align-items: start;
     }
@@ -126,8 +117,7 @@
     }
 
     .home-grid {
-        grid-template-columns:
-            1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .hero-text {
@@ -138,8 +128,7 @@
     }
 
     .discover-grid {
-        grid-template-columns:
-            repeat(auto-fit,minmax(320px,1fr));
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
 
     /* Join Page */

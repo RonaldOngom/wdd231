@@ -63,13 +63,15 @@
 </div>
 
 <button id="menuButton"
-aria-label="Toggle Navigation">
+aria-label="Open Navigation"
+aria-expanded="false"
+type="button">
 
 ☰
 
 </button>
 
-<nav>
+<nav role="navigation" aria-label="Primary navigation">
 
 <ul id="primaryNav">
 
@@ -106,13 +108,13 @@ are members of the Lira City Chamber of Commerce.
 
 <div class="view-controls">
 
-<button id="gridView">
+<button id="gridView" type="button" aria-pressed="true">
 
 ⬛ Grid View
 
 </button>
 
-<button id="listView">
+<button id="listView" type="button" aria-pressed="false">
 
 📋 List View
 

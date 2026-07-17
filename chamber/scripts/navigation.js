@@ -13,13 +13,10 @@ if (menuButton && navigation) {
     menuButton.addEventListener("click", () => {
         navigation.classList.toggle("open");
 
-        if (navigation.classList.contains("open")) {
-            menuButton.textContent = "✕";
-            menuButton.setAttribute("aria-label", "Close Navigation");
-        } else {
-            menuButton.textContent = "☰";
-            menuButton.setAttribute("aria-label", "Open Navigation");
-        }
+        const isOpen = navigation.classList.contains("open");
+        menuButton.textContent = isOpen ? "✕" : "☰";
+        menuButton.setAttribute("aria-label", isOpen ? "Close Navigation" : "Open Navigation");
+        menuButton.setAttribute("aria-expanded", isOpen.toString());
     });
 }
 
@@ -30,6 +27,7 @@ const currentPage = window.location.pathname.split("/").pop();
 document.querySelectorAll("nav a").forEach(link => {
     if (link.getAttribute("href") === currentPage) {
         link.classList.add("active");
+        link.setAttribute("aria-current", "page");
     }
 });
 

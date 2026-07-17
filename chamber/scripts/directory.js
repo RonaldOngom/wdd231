@@ -131,6 +131,9 @@ gridButton.addEventListener("click", () => {
 
     directory.classList.remove("list");
 
+    gridButton.setAttribute("aria-pressed", "true");
+    listButton.setAttribute("aria-pressed", "false");
+
 });
 
 /**
@@ -142,6 +145,9 @@ listButton.addEventListener("click", () => {
     directory.classList.add("list");
 
     directory.classList.remove("grid");
+
+    listButton.setAttribute("aria-pressed", "true");
+    gridButton.setAttribute("aria-pressed", "false");
 
 });
 

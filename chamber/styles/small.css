@@ -214,9 +214,14 @@ form,
     padding: .9rem 1.4rem;
 }
 
+.view-controls button[aria-pressed="true"],
 .view-controls button:hover,
 .submit-button:hover {
     background: var(--secondary);
+}
+
+.view-controls button[aria-pressed="true"] {
+    color: var(--black);
 }
 
 .view-controls button:hover {
@@ -239,6 +244,21 @@ form,
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+#directory.list .member-card {
+    display: block;
+    padding: 1rem;
+}
+
+#directory.list .member-card img {
+    display: none;
+}
+
+#directory.list .member-card h3,
+#directory.list .member-card p,
+#directory.list .member-card a {
+    margin: 0;
 }
 
 .member-card:hover {
