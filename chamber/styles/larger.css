@@ -73,21 +73,7 @@
 
     /* ---------- List View ---------- */
 
-    #directory.list .member-card {
-        display: block;
-        text-align: left;
-        padding: 1rem 1.25rem;
-    }
-
-    #directory.list .member-card img {
-        display: none;
-    }
-
-    #directory.list .member-card h3,
-    #directory.list .member-card p,
-    #directory.list .member-card a {
-        margin: 0;
-    }
+    /* Desktop list layout is inherited from the base mobile styles in small.css */
 
     /* ---------- Footer ---------- */
 
