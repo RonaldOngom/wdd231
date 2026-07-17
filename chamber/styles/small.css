@@ -38,7 +38,7 @@
 }
 
 /* ---------- Body ---------- */
-body {
+body.chamber-page {
     margin: 0;
     font-family: var(--body-font);
     background: var(--light);
@@ -70,7 +70,7 @@ textarea:focus {
 }
 
 /* ---------- Images ---------- */
-img {
+body.chamber-page img {
     max-width: 100%;
     display: block;
 }
@@ -145,7 +145,7 @@ nav a:hover {
 }
 
 /* ---------- Main ---------- */
-main {
+body.chamber-page #main-content {
     max-width: var(--max-width);
     margin: auto;
     padding: 1rem;
@@ -247,11 +247,15 @@ form,
 }
 
 #directory.list .member-card {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 1rem;
     padding: 1rem;
 }
 
-#directory.list .member-card img {
+#directory.list .member-card img,
+#directory.list img {
     display: none;
 }
 
@@ -334,17 +338,6 @@ form,
 /* ---------- List View ---------- */
 #directory.list {
     display: block;
-}
-
-#directory.list .member-card {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin-bottom: 1rem;
-}
-
-#directory.list img {
-    display: none;
 }
 
 /* ---------- Footer ---------- */
