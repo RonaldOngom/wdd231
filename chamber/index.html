@@ -1,118 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-US">
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Lira City Chamber of Commerce | Home</title>
 
-    <meta name="description"
-        content="Welcome to the Lira City Chamber of Commerce. Supporting businesses, entrepreneurs, and economic growth in Northern Uganda.">
+    <meta name="description" content="Welcome to the Lira City Chamber of Commerce. Discover local businesses, community events, investment opportunities, and membership benefits.">
 
     <meta name="author" content="Ongom Ronald">
 
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Open Graph -->
-
     <meta property="og:title" content="Lira City Chamber of Commerce">
+    <meta property="og:description" content="Connecting businesses, strengthening communities.">
+    <meta property="og:image" content="images/og-image.webp">
+    <meta property="og:url" content="https://yourusername.github.io/wdd231/chamber/">
 
-    <meta property="og:description"
-        content="Building stronger businesses and stronger communities.">
-
-    <meta property="og:image"
-        content="https://ronaldongom.github.io/wdd231/chamber/images/og-image.webp">
-
-    <meta property="og:url"
-        content="https://ronaldongom.github.io/wdd231/chamber/index.html">
-
-    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="icon" href="favicon.ico">
 
     <link rel="stylesheet" href="styles/small.css">
-
     <link rel="stylesheet" href="styles/larger.css">
 
     <script src="scripts/navigation.js" defer></script>
-
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
 </head>
 
 <body>
 
-<a class="skip-link" href="#main-content">Skip to main content</a>
-
 <header>
 
-<div class="logo-area">
-
-<img src="images/logo.svg"
-alt="Lira Chamber Logo"
-width="80"
-height="80">
-
-<div>
-
-<p class="site-title">Lira City Chamber of Commerce</p>
-
-<p>Connecting Business • Creating Opportunities</p>
-
-</div>
-
-</div>
-
-<button id="menuButton">☰</button>
-
-<nav>
-
-<ul id="primaryNav">
-
-<li><a href="index.html">Home</a></li>
-
-<li><a href="directory.html">Directory</a></li>
-
-<li><a href="discover.html">Discover</a></li>
-
-<li><a href="join.html">Join</a></li>
-
-<li><a href="thankyou.html">Thank You</a></li>
-
-</ul>
-
-</nav>
+    <!-- Keep your existing logo/header -->
 
 </header>
 
-<main id="main-content">
+<nav>
 
-<section class="home-hero">
+    <!-- Keep your existing navigation -->
 
-<img src="images/lira-city.webp"
-alt="Lira City"
-loading="lazy"
-width="1200"
-height="600">
+</nav>
 
-<div class="hero-text">
+<main>
 
-<h1>Growing Business Together</h1>
+<section class="hero">
+
+<img
+src="images/lira-city.webp"
+alt="Lira City Business District"
+loading="eager">
+
+<div class="hero-content">
+
+<h1>Lira City Chamber of Commerce</h1>
 
 <p>
-
-Supporting local businesses, creating investment opportunities,
-and strengthening our community.
-
+Connecting Businesses.
+Supporting Growth.
+Building Prosperity.
 </p>
 
-<a class="join-button"
-href="join.html">
-
-Become a Member
-
+<a class="cta-button" href="join.html">
+Join the Chamber
 </a>
 
 </div>
@@ -121,61 +68,49 @@ Become a Member
 
 <section class="home-grid">
 
-<div class="card">
+<section class="events card">
 
-<h2>Upcoming Events</h2>
+<h2>Current Events</h2>
 
 <ul>
 
-<li>Business Networking Breakfast</li>
+<li>Annual Business Expo – August 15</li>
 
-<li>Entrepreneurship Workshop</li>
+<li>Investment Forum – September 10</li>
 
-<li>Technology Innovation Expo</li>
+<li>SME Digital Skills Workshop</li>
 
-<li>Youth Business Forum</li>
+<li>Farmers Market & Trade Fair</li>
 
 </ul>
 
-</div>
+</section>
 
-<div class="card">
+<section class="weather card">
 
-<h2>Current Weather</h2>
+<h2>Weather</h2>
 
-<p id="weather">
+<div id="current-weather">
 
-Loading weather...
-
-</p>
+<p class="loading">Loading weather...</p>
 
 </div>
 
-<div class="card">
-
-<h2>Spotlight Members</h2>
-
-<div id="spotlights">
-
-Loading Chamber Members...
-
-</div>
+<div id="forecast">
 
 </div>
 
 </section>
 
-<section class="about">
+</section>
 
-<h2>About the Chamber</h2>
+<section class="spotlights">
 
-<p>
+<h2>Member Spotlights</h2>
 
-The Lira City Chamber of Commerce is dedicated to supporting
-businesses, promoting investment, encouraging innovation,
-and improving the economic well-being of Northern Uganda.
+<div id="spotlight-container">
 
-</p>
+</div>
 
 </section>
 
@@ -183,78 +118,9 @@ and improving the economic well-being of Northern Uganda.
 
 <footer>
 
-<div class="footer-contact">
-
-<h3>Lira City Chamber of Commerce</h3>
-
-<p>Coronation Road</p>
-
-<p>Lira City, Uganda</p>
-
-<p>info@lirachamber.org</p>
-
-<p>+256 772 123456</p>
-
-</div>
-
-<div class="footer-social">
-
-<a href="#" aria-label="Facebook">
-
-<img src="images/facebook.jpg"
-alt="Facebook"
-width="32"
-height="32">
-
-</a>
-
-<a href="#" aria-label="LinkedIn">
-
-<img src="images/linkedin.jpg"
-alt="LinkedIn"
-width="32"
-height="32">
-
-</a>
-
-<a href="#" aria-label="X">
-
-<img src="images/x-logo.jpg"
-alt="X"
-width="32"
-height="32">
-
-</a>
-
-</div>
-
-<div class="footer-info">
-
-<p>
-
-&copy;
-<span id="year"></span>
-Lira City Chamber of Commerce
-
-</p>
-
-<p>
-
-Ongom Ronald | WDD 231
-
-</p>
-
-<p>
-
-Last Modification:
-<span id="lastModified"></span>
-
-</p>
-
-</div>
+<!-- Keep your existing footer -->
 
 </footer>
 
 </body>
-
 </html>

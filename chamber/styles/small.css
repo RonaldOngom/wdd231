@@ -1,554 +1,229 @@
-/* -----------------------------
+/* ==========================================
+   HOME PAGE STYLES
    Lira City Chamber of Commerce
-   Mobile-First Styles
---------------------------------*/
+   ========================================== */
 
-/* ---------- Root Variables ---------- */
-:root {
-    --primary: #0b4f6c;
-    --primary-rgb: 11,79,108;
-    --secondary: #1b998b;
-    --accent: #f4a261;
-    --gold: #f4c542;
-    --light: #f8f9fa;
-    --surface: #ffffff;
-    --surface-light: #f8f9fa;
-    --dark: #222222;
-    --white: #ffffff;
-    --black: #000000;
-    --text: #000000;
-    --muted: #333333;
-    --border: #d9d9d9;
-    --border-muted: #cccccc;
-    --shadow: 0 2px 8px rgba(0,0,0,.08);
-    --shadow-strong: 0 10px 25px rgba(0,0,0,.15);
-    --max-width: 1200px;
-    --heading-font: 'Poppins', Arial, Helvetica, sans-serif;
-    --body-font: 'Poppins', Verdana, Geneva, sans-serif;
-}
+/* ---------- HERO SECTION ---------- */
 
-/* ---------- Reset ---------- */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    transition: background-color .2s ease,
-                color .2s ease,
-                border-color .2s ease;
-}
-
-/* ---------- Body ---------- */
-body.chamber-page {
-    margin: 0;
-    font-family: var(--body-font);
-    background: var(--light);
-    color: var(--dark);
-    line-height: 1.6;
-}
-
-.skip-link {
-    position: absolute;
-    left: -9999px;
-    top: 0;
-    background: var(--black);
-    color: var(--white);
-    padding: 1rem;
-    z-index: 1000;
-}
-
-.skip-link:focus {
-    left: 1rem;
-}
-
-a:focus,
-button:focus,
-input:focus,
-select:focus,
-textarea:focus {
-    outline: 3px solid var(--accent);
-    outline-offset: 3px;
-}
-
-/* ---------- Images ---------- */
-body.chamber-page img {
-    max-width: 100%;
-    display: block;
-}
-
-/* ---------- Header ---------- */
-header,
-footer {
-    background: var(--primary);
-    color: white;
-}
-
-.logo-area {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-}
-
-.logo-area h1 {
-    margin: 0;
-    font-size: 1.4rem;
-}
-
-.logo-area p {
-    margin: .25rem 0 0;
-    font-size: .9rem;
-}
-
-/* ---------- Navigation ---------- */
-#menuButton {
-    width: 100%;
-    border: none;
-    background: var(--secondary);
-    color: white;
-    font-size: 1.6rem;
-    padding: .75rem;
-    cursor: pointer;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: none;
-}
-
-nav.open ul {
-    display: block;
-}
-
-nav li {
-    border-top: 1px solid rgba(255,255,255,.15);
-}
-
-nav a,
-footer a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 1rem;
-    transition: background .3s;
-}
-
-nav a:hover {
-    background: rgba(255,255,255,.15);
-}
-
-.active {
-    background: var(--accent);
-    color: black;
-    font-weight: bold;
-}
-
-/* ---------- Main ---------- */
-body.chamber-page #main-content {
-    max-width: var(--max-width);
-    margin: auto;
-    padding: 1rem;
-}
-
-.hero,
-.member-card,
-.card,
-.discover-card,
-.spotlight-card,
-form,
-.membership-card,
-.thank-you {
-    background: var(--surface);
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-}
-
-/* ---------- Hero ---------- */
 .hero {
-    padding: 2rem;
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.hero h2,
-.card h2,
-.discover-card h3,
-.member-card h3,
-.spotlight-card h3,
-.membership-card h3 {
-    color: var(--primary);
-}
-
-.hero h2,
-.card h2,
-.spotlight-card h3,
-.membership-card h3 {
-    margin-top: 0;
-}
-
-.member-card h3 {
-    margin-top: 1rem;
-}
-
-/* ---------- View Buttons ---------- */
-.view-controls {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.view-controls button,
-.submit-button {
-    background: var(--primary);
-    color: var(--white);
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background .3s ease;
-}
-
-.view-controls button {
-    padding: .9rem 1.4rem;
-}
-
-.view-controls button[aria-pressed="true"],
-.view-controls button:hover,
-.submit-button:hover {
-    background: var(--secondary);
-}
-
-.view-controls button[aria-pressed="true"] {
-    color: var(--black);
-}
-
-.view-controls button:hover {
-    transform: scale(1.05);
-}
-
-/* ---------- Directory Grid ---------- */
-#directory.grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-}
-
-/* ---------- Member Cards ---------- */
-.member-card {
-    padding: 1rem;
-    text-align: center;
-    border: 1px solid var(--border);
-    transition: transform .3s, box-shadow .3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-body.chamber-page #directory.list .member-card {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin-bottom: 1rem;
-    padding: 1rem;
-}
-
-body.chamber-page #directory.list .member-card img,
-body.chamber-page #directory.list img {
-    display: none;
-}
-
-body.chamber-page #directory.list .member-card h3,
-body.chamber-page #directory.list .member-card p,
-body.chamber-page #directory.list .member-card a {
-    margin: 0;
-}
-
-.member-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-strong);
-}
-
-.member-card img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    margin: auto;
-    border-radius: 50%;
-}
-
-.member-card p {
-    margin: .5rem 0;
-}
-
-.member-card a,
-.spotlight-card a {
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.member-card a {
-    color: var(--secondary);
-}
-
-.member-card a:hover,
-.spotlight-card a:hover {
-    text-decoration: underline;
-}
-
-.membership,
-.member,
-.silver,
-.gold {
-    display: inline-block;
-    border-radius: 20px;
-    font-weight: bold;
-}
-
-.membership {
-    margin-top: 1rem;
-    padding: .5rem 1rem;
-    background: var(--accent);
-    color: var(--text);
-    font-size: .9rem;
-}
-
-.member,
-.silver,
-.gold {
-    padding: .35rem .75rem;
-}
-
-.member {
-    background: var(--border);
-    color: var(--muted);
-}
-
-.silver {
-    background: var(--border-muted);
-    color: var(--black);
-}
-
-.gold {
-    background: var(--gold);
-    color: var(--black);
-}
-
-/* ---------- List View ---------- */
-body.chamber-page #directory.list {
-    display: block;
-}
-
-/* ---------- Footer ---------- */
-footer {
-    margin-top: 2rem;
-    padding: 2rem 1rem;
-}
-
-.footer-contact,
-.footer-social,
-.footer-info {
-    margin-bottom: 1.5rem;
-}
-
-.footer-social {
-    display: flex;
-    gap: 1rem;
-}
-
-.footer-social img {
-    width: 32px;
-}
-
-footer p {
-    margin: .4rem 0;
-}
-
-/* ===========================
-   Error Message
-=========================== */
-.error {
-    text-align: center;
-    color: darkred;
-    font-size: 1.2rem;
-    padding: 2rem;
-}
-
-/* ===============================
-   HOME PAGE
-=================================*/
-.home-hero {
     position: relative;
-    margin-bottom: 2rem;
+    overflow: hidden;
 }
 
-.home-hero img {
+.hero img {
+    display: block;
     width: 100%;
-    border-radius: 10px;
+    height: 350px;
+    object-fit: cover;
 }
 
-.hero-text {
-    background: rgba(var(--primary-rgb), .9);
-    color: var(--white);
-    padding: 1.5rem;
-    border-radius: 10px;
-    margin-top: 1rem;
+.hero-content {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: #ffffff;
+    padding: 1rem;
 }
 
-.join-button {
+.hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+    max-width: 600px;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+/* ---------- CALL TO ACTION BUTTON ---------- */
+
+.cta-button {
     display: inline-block;
-    margin-top: 1rem;
-    padding: .8rem 1.4rem;
-    background: var(--accent);
-    color: var(--text);
+    background: #f9b000;
+    color: #000000;
     text-decoration: none;
+    padding: 0.9rem 2rem;
     border-radius: 8px;
     font-weight: bold;
+    transition: all 0.3s ease;
 }
 
-.home-grid,
-.discover-grid,
-.join-container,
-.membership-cards {
-    display: grid;
-    gap: 1.5rem;
+.cta-button:hover {
+    background: #ffcf40;
+    transform: translateY(-2px);
 }
+
+/* ---------- HOME GRID ---------- */
 
 .home-grid {
-    margin: 2rem 0;
+    display: grid;
+    gap: 1rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-.card,
-.discover-card,
-.membership-card {
-    padding: 1.5rem;
+/* ---------- CARD STYLES ---------- */
+
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 .card h2 {
-    margin-top: 0;
-}
-
-/* ==========================
-   DISCOVER PAGE
-========================== */
-.discover-grid {
-    margin-top: 2rem;
-}
-
-.discover-card img {
-    width: 100%;
-    border-radius: 8px;
-    transition: .3s;
-}
-
-.discover-card img:hover {
-    transform: scale(1.03);
-}
-
-/* ==========================
-   Spotlight Cards
-========================== */
-.spotlight-card {
+    color: #005f73;
     margin-bottom: 1rem;
+    border-bottom: 2px solid #f9b000;
+    padding-bottom: .4rem;
+}
+
+/* ---------- EVENTS ---------- */
+
+.events ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.events li {
+    padding: .7rem 0;
+    border-bottom: 1px solid #dddddd;
+}
+
+/* ---------- WEATHER ---------- */
+
+.weather {
     text-align: center;
+}
+
+.weather img {
+    width: 60px;
+    height: 60px;
+}
+
+#current-weather {
+    margin-bottom: 1rem;
+}
+
+#forecast {
+    display: grid;
+    gap: .75rem;
+    margin-top: 1rem;
+}
+
+.forecast-card {
+    background: #f4f7f9;
+    border-radius: 8px;
+    padding: .75rem;
+}.forecast-card{
+    background:#eef6fa;
+    border-radius:8px;
+    padding:1rem;
+    text-align:center;
+}
+
+.forecast-card h4{
+    margin-bottom:.5rem;
+    color:#005f73;
+}
+
+#current-weather img{
+    width:80px;
+    height:80px;
+}
+
+/* ---------- MEMBER SPOTLIGHTS ---------- */
+
+.spotlights {
+    margin: 2rem 1rem;
+}
+
+.spotlights h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+#spotlight-container {
+    display: grid;
+    gap: 1rem;
+}
+
+.spotlight-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.1);
     padding: 1rem;
+    text-align: center;
 }
 
 .spotlight-card img {
-    display: block;
-    margin: auto;
-    border-radius: 50%;
+    width: 140px;
+    height: auto;
     margin-bottom: 1rem;
 }
 
 .spotlight-card h3 {
-    margin-top: 0;
+    color: #005f73;
+    margin-bottom: .5rem;
+}
+
+.spotlight-card p {
+    margin: .35rem 0;
+    font-size: .95rem;
+}
+
+.spotlight-card a {
+    color: #005f73;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.spotlight-card a:hover {
+    text-decoration: underline;
+}.spotlight-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .75rem;
+}
+
+.spotlight-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.spotlight-card p {
+    margin: 0;
+    text-align: center;
 }
 
 .spotlight-card a {
     display: inline-block;
-    margin-top: .75rem;
-    color: var(--primary);
-}
-
-/* ==========================
-   Animations
-========================== */
-.member-card,
-.discover-card,
-.membership-card,
-.spotlight-card {
-    animation: fadeIn .5s ease-in;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ==========================
-   JOIN PAGE
-========================== */
-.join-container {
-    margin: 2rem 0;
-}
-
-form {
-    padding: 1.5rem;
-}
-
-form label {
-    display: block;
-    margin-bottom: 1rem;
-    font-weight: bold;
-}
-
-form input,
-form textarea,
-form select {
-    width: 100%;
-    padding: .75rem;
-    margin-top: .4rem;
-    border: 1px solid var(--border-muted);
+    margin-top: .5rem;
+    padding: .5rem 1rem;
+    background: #005f73;
+    color: #fff;
     border-radius: 6px;
-    font-size: 1rem;
+    text-decoration: none;
 }
 
-form textarea {
-    resize: vertical;
+.spotlight-card a:hover {
+    background: #0a9396;
 }
 
-.submit-button {
-    padding: 1rem;
-    border-radius: 8px;
-}
+/* ---------- FOOTER ---------- */
 
-/* ==========================
-   THANK YOU PAGE
-========================== */
-.thank-you {
-    max-width: 800px;
-    margin: auto;
-    padding: 2rem;
-    text-align: center;
-}
-
-.application-summary {
-    margin: 2rem 0;
-    text-align: left;
-    padding: 1.5rem;
-    background: var(--surface-light);
-    border-radius: 10px;
-}
-
-.application-summary p {
-    padding: .5rem 0;
-    border-bottom: 1px solid var(--border);
+footer {
+    margin-top: 3rem;
 }

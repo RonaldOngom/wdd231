@@ -1,73 +1,78 @@
-const spotlightContainer = document.querySelector("#spotlights");
+// ===============================================
+// Lira City Chamber Member Spotlights
+// WDD231 Chamber Project
+// ===============================================
+
+const spotlightContainer = document.querySelector("#spotlight-container");
+const membersURL = "data/members.json";
 
 async function loadSpotlights() {
-
     try {
-
-        const response = await fetch("data/members.json");
+        const response = await fetch(membersURL);
 
         if (!response.ok) {
             throw new Error("Unable to load members.");
         }
 
-        const members = await response.json();
+        const data = await response.json();
 
-        // Only Silver (2) and Gold (3) members
-        const featured = members.filter(
-            member => member.membership >= 2
-        );
-
-        // Shuffle
-        featured.sort(() => Math.random() - 0.5);
-
-        // Display three
-        const selected = featured.slice(0, 3);
-
-        displaySpotlights(selected);
+        displaySpotlights(data.members);
 
     } catch (error) {
-
-        spotlightContainer.textContent =
-            "Unable to load spotlight members.";
-
         console.error(error);
 
+        spotlightContainer.innerHTML =
+            "<p>Unable to load featured members.</p>";
     }
-
 }
 
 function displaySpotlights(members) {
 
+    // Keep only Gold and Silver members
+    const qualified = members.filter(member =>
+        member.membership === "Gold" ||
+        member.membership === "Silver"
+    );
+
+    // Shuffle the array
+    qualified.sort(() => Math.random() - 0.5);
+
+    // Randomly display 2 or 3 members
+    const total = Math.random() < 0.5 ? 2 : 3;
+
+    const selected = qualified.slice(0, total);
+
     spotlightContainer.innerHTML = "";
 
-    members.forEach(member => {
+    selected.forEach(member => {
 
         const card = document.createElement("section");
 
         card.classList.add("spotlight-card");
 
         card.innerHTML = `
-            <h3>${member.name}</h3>
 
             <img
-                src="images/${member.image}"
-                alt="${member.name}"
-                loading="lazy"
-                width="120"
-                height="120">
+                src="${member.image}"
+                alt="${member.name} Logo"
+                loading="lazy">
 
-            <p>${member.description}</p>
+            <h3>${member.name}</h3>
 
-            <p><strong>${member.industry}</strong></p>
+            <p><strong>Phone:</strong><br>${member.phone}</p>
 
-            <a
-                href="${member.website}"
-                target="_blank"
-                rel="noopener">
+            <p><strong>Address:</strong><br>${member.address}</p>
 
-                Visit Website
+            <p><strong>Membership:</strong><br>${member.membership}</p>
 
-            </a>
+            <p>
+                <a href="${member.website}"
+                   target="_blank"
+                   rel="noopener">
+                    Visit Website
+                </a>
+            </p>
+
         `;
 
         spotlightContainer.appendChild(card);
