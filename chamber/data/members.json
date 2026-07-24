@@ -7,8 +7,9 @@
     "website": "https://kairoswaves.com",
     "image": "images/kairos-waves.webp",
     "membership": 3,
-    "email": "info@company.com",
-    "description": "Short description of the company.",
+    "email": "info@kairoswaves.com",
+    "description": "Leading technology company providing web design, software development, IT consulting, computer repair, networking solutions, and digital transformation services for businesses in Northern Uganda.",
+    "established": 2021,
     "industry": "Technology"
   },
   {
@@ -19,8 +20,9 @@
     "website": "https://langohotel.com",
     "image": "images/lango-hotel.webp",
     "membership": 3,
-    "email": "info@company.com",
-    "description": "Short description of the company.",
+    "email": "reservations@langohotel.com",
+    "description": "A modern hotel offering quality accommodation, conference facilities, fine dining, and hospitality services for business and leisure travelers visiting Lira City.",
+    "established": 1998,
     "industry": "Hospitality"
   },
   {
@@ -31,8 +33,9 @@
     "website": "https://www.lirauni.ac.ug",
     "image": "images/lira-university.webp",
     "membership": 3,
-    "email": "info@company.com",
-    "description": "Short description of the company.",
+    "email": "info@lirauni.ac.ug",
+    "description": "A public university dedicated to quality higher education, research, innovation, and community development in Northern Uganda.",
+    "established": 2012,
     "industry": "Education"
   },
   {
@@ -43,8 +46,9 @@
     "website": "https://www.liramedicalcentre.com",
     "image": "images/medical-centre.webp",
     "membership": 2,
-    "email": "info@company.com",
-    "description": "Short description of the company.",
+    "email": "info@liramedicalcentre.com",
+    "description": "A healthcare facility providing outpatient and inpatient medical services, laboratory testing, maternity care, and emergency treatment.",
+    "established": 2008,
     "industry": "Healthcare"
   },
   {
@@ -55,8 +59,9 @@
     "website": "https://www.lirafarmers.org",
     "image": "images/farmers-cooperative.webp",
     "membership": 2,
-    "email": "info@company.com",
-    "description": "Short description of the company.",
+    "email": "info@lirafarmers.org",
+    "description": "An agricultural cooperative supporting local farmers through training, access to quality inputs, produce marketing, and financial empowerment.",
+    "established": 2005,
     "industry": "Agriculture"
   },
   {
@@ -67,8 +72,9 @@
     "website": "https://www.liratechhub.org",
     "image": "images/lira-tech.webp",
     "membership": 3,
-    "email": "info@company.com",
-    "description": "Short description of the company.",
+    "email": "info@liratechhub.org",
+    "description": "A technology innovation hub that supports startups, software developers, entrepreneurs, and digital skills training throughout Northern Uganda.",
+    "established": 2019,
     "industry": "Technology"
   },
   {
@@ -79,8 +85,9 @@
     "website": "https://www.lirasupermarket.com",
     "image": "images/supermarket.webp",
     "membership": 2,
-    "email": "info@company.com",
-    "description": "Short description of the company.",
+    "email": "info@lirasupermarket.com",
+    "description": "A retail supermarket offering groceries, household goods, fresh produce, electronics, and everyday consumer products at affordable prices.",
+    "established": 2014,
     "industry": "Retail"
   },
   {
@@ -91,8 +98,9 @@
     "website": "https://www.centenarybank.co.ug",
     "image": "images/bank.webp",
     "membership": 3,
-    "email": "info@company.com",
-    "description": "Short description of the company.",
+    "email": "lira@centenarybank.co.ug",
+    "description": "A trusted financial institution providing personal banking, business banking, loans, savings accounts, and digital financial services.",
+    "established": 1983,
     "industry": "Banking"
   },
   {
@@ -103,8 +111,9 @@
     "website": "https://www.liramarket.org",
     "image": "images/market.webp",
     "membership": 1,
-    "email": "info@company.com",
-    "description": "Short description of the company.",
+    "email": "info@liramarket.org",
+    "description": "An association representing market traders, promoting fair trade practices, business growth, and improved market infrastructure.",
+    "established": 2001,
     "industry": "Trade"
   },
   {
@@ -115,8 +124,9 @@
     "website": "https://www.northernagri.com",
     "image": "images/agriculture.webp",
     "membership": 2,
-    "email": "info@company.com",
-    "description": "Short description of the company.",
+    "email": "sales@northernagri.com",
+    "description": "Supplier of certified seeds, fertilizers, irrigation equipment, farm tools, pesticides, and agricultural extension services.",
+    "established": 2010,
     "industry": "Agriculture"
   },
   {
@@ -127,8 +137,9 @@
     "website": "https://www.liraculture.org",
     "image": "images/culture.webp",
     "membership": 1,
-    "email": "info@company.com",
-    "description": "Short description of the company.",
+    "email": "info@liraculture.org",
+    "description": "Promotes the preservation of Lango culture through exhibitions, traditional performances, arts education, and cultural tourism.",
+    "established": 2007,
     "industry": "Culture"
   },
   {
@@ -139,8 +150,9 @@
     "website": "https://www.lirainvestment.com",
     "image": "images/investment.webp",
     "membership": 3,
-    "email": "info@company.com",
-    "description": "Short description of the company.",
+    "email": "info@lirainvestment.com",
+    "description": "Provides investment advisory, business financing, entrepreneurship support, and economic development initiatives for local businesses.",
+    "established": 2016,
     "industry": "Finance"
   },
   {
@@ -151,8 +163,9 @@
     "website": "https://www.northernlogistics.com",
     "image": "images/logistics.webp",
     "membership": 2,
-    "email": "info@company.com",
-    "description": "Short description of the company.",
+    "email": "info@northernlogistics.com",
+    "description": "Offers transportation, cargo handling, warehousing, fleet management, and logistics solutions across Uganda and East Africa.",
+    "established": 2013,
     "industry": "Transport"
   },
   {
@@ -163,8 +176,9 @@
     "website": "https://www.liraprinting.com",
     "image": "images/printing.webp",
     "membership": 1,
-    "email": "info@company.com",
-    "description": "Short description of the company.",
+    "email": "info@liraprinting.com",
+    "description": "Professional printing company specializing in business cards, banners, branding materials, books, promotional products, and graphic design.",
+    "established": 2011,
     "industry": "Printing"
   },
   {
@@ -175,8 +189,9 @@
     "website": "https://www.lirabuilders.org",
     "image": "images/builders.webp",
     "membership": 2,
-    "email": "info@company.com",
-    "description": "Short description of the company.",
+    "email": "info@lirabuilders.org",
+    "description": "A professional association bringing together contractors, engineers, architects, and construction companies to promote quality building standards.",
+    "established": 2004,
     "industry": "Construction"
   }
 ]

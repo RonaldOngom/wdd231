@@ -9,10 +9,13 @@
     --light: #f8f9fa;
     --dark: #212529;
     --success: #2e7d32;
-    --completed: #dcedc8;
+    --completed: #d8f5d3;
+    --white: #ffffff;
+    --black: #000000;
 
     --radius: 12px;
-    --shadow: 0 4px 12px rgba(0, 0, 0, .1);
+    --shadow: 0 4px 12px #0000001a;
+    --course-shadow: 0 3px 8px #0000001a;
 }
 
 * {
@@ -39,7 +42,7 @@ img {
 
 header {
     background: var(--primary);
-    color: white;
+    color: var(--white);
 
     display: flex;
     justify-content: space-between;
@@ -68,7 +71,7 @@ header {
     background: none;
     border: none;
 
-    color: white;
+    color: var(--white);
 
     font-size: 2rem;
 
@@ -88,7 +91,7 @@ nav.open {
 
 nav a {
 
-    color: white;
+    color: var(--white);
 
     text-decoration: none;
 
@@ -101,7 +104,7 @@ nav a {
 
 nav a:hover {
 
-    background: rgba(255, 255, 255, .2);
+    background: #ffffff33;
 
 }
 
@@ -109,7 +112,7 @@ nav a:hover {
 
     background: var(--accent);
 
-    color: black;
+    color: var(--black);
 
 }
 
@@ -141,7 +144,7 @@ h1 {
 
 .card {
 
-    background: white;
+    background: var(--white);
 
     border-radius: var(--radius);
 
@@ -173,7 +176,7 @@ h1 {
 
     margin-top: 2rem;
 
-    background: white;
+    background: var(--white);
 
     padding: 1.5rem;
 
@@ -201,7 +204,7 @@ h1 {
 
     background: var(--secondary);
 
-    color: white;
+    color: var(--white);
 
     padding: .7rem 1.2rem;
 
@@ -229,7 +232,7 @@ h1 {
 
 .course-card {
 
-    background: white;
+    background: var(--white);
 
     border-radius: 12px;
 
@@ -237,7 +240,7 @@ h1 {
 
     text-align: center;
 
-    box-shadow: 0 3px 8px rgba(0, 0, 0, .1);
+    box-shadow: var(--course-shadow);
 
     transition: .3s;
 
@@ -259,9 +262,9 @@ h1 {
 
 .completed {
 
-    background: #d8f5d3;
+    background: var(--completed);
 
-    border-left: 8px solid #2e7d32;
+    border-left: 8px solid var(--success);
 
 }
 
@@ -275,7 +278,7 @@ footer {
 
     background: var(--primary);
 
-    color: white;
+    color: var(--white);
 
     text-align: center;
 
@@ -297,7 +300,7 @@ footer {
 
 .social a {
 
-    color: white;
+    color: var(--white);
 
     text-decoration: none;
 

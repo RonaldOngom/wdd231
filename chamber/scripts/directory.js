@@ -51,17 +51,16 @@ function displayMembers(members) {
 
         card.innerHTML = `
             <img
-                src="images/${member.image}"
+                src="${member.image}"
                 alt="${member.name} Logo"
+                class="business-logo"
                 loading="lazy"
                 width="200"
-                height="200">
+                height="120">
 
-            <h3>${member.name}</h3>
+            <h2>${member.name}</h2>
 
             <p>${member.description}</p>
-
-            <hr>
 
             <p><strong>Industry:</strong> ${member.industry}</p>
 
@@ -70,25 +69,20 @@ function displayMembers(members) {
             <p><strong>Phone:</strong> ${member.phone}</p>
 
             <p>
-                <strong>Website:</strong><br>
-
                 <a href="${member.website}"
                    target="_blank"
                    rel="noopener noreferrer">
-
                     ${member.website}
-
                 </a>
             </p>
 
             <p><strong>Email:</strong> ${member.email}</p>
 
-            <p><strong>Established:</strong> ${member.founded}</p>
+            <p><strong>Established:</strong> ${member.established}</p>
 
             <p class="membership">
-
                 ${getMembershipLevel(member.membership)}
-
+            </p>
             </p>
         `;
 
