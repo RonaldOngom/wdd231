@@ -6,121 +6,249 @@
 
     <title>Lira City Chamber of Commerce | Home</title>
 
-    <meta name="description" content="Welcome to the Lira City Chamber of Commerce. Discover local businesses, community events, investment opportunities, and membership benefits.">
+    <meta name="description"
+        content="Welcome to the Lira City Chamber of Commerce. Promoting business growth, investment, community development, and local opportunities in Northern Uganda.">
 
     <meta name="author" content="Ongom Ronald">
 
+    <!-- Open Graph -->
     <meta property="og:title" content="Lira City Chamber of Commerce">
-    <meta property="og:description" content="Connecting businesses, strengthening communities.">
+    <meta property="og:type" content="website">
     <meta property="og:image" content="images/og-image.webp">
-    <meta property="og:url" content="https://yourusername.github.io/wdd231/chamber/">
+    <meta property="og:url"
+        content="https://ronaldongom.github.io/wdd231/chamber/index.html">
 
-    <link rel="icon" href="favicon.ico">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="stylesheet" href="styles/small.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
 
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/weather.js" defer></script>
-    <script src="scripts/spotlight.js" defer></script>
+    <link rel="icon" href="favicon.ico">
 </head>
 
 <body>
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <header>
 
-    <!-- Keep your existing logo/header -->
+    <div class="logo">
+        <img src="images/logo.webp" alt="Lira Chamber Logo" width="70" height="70">
+
+        <div>
+            <h1>Lira City Chamber</h1>
+            <p>Building Business Together</p>
+        </div>
+    </div>
+
+    <button
+    id="menu"
+    aria-label="Open navigation menu"
+    aria-expanded="false">
+</button>
+
+    <nav class="navigation">
+
+        <a href="index.html" class="active">Home</a>
+
+        <a href="directory.html">Directory</a>
+
+        <a href="discover.html">Discover</a>
+
+        <a href="join.html">Join</a>
+
+    </nav>
 
 </header>
 
-<nav>
+<main id="main-content">
 
-    <!-- Keep your existing navigation -->
+    <!-- HERO -->
 
-</nav>
+    <section class="hero">
 
-<main>
+        <picture>
 
-<section class="hero">
+            <source
+                media="(min-width:1000px)"
+                srcset="images/lira-city-large.webp">
 
-<img
-src="images/lira-city.webp"
-alt="Lira City Business District"
-loading="eager">
+            <img
+                src="images/lira-city.webp"
+                alt="Aerial view of Lira City, Uganda"
+                width="1200"
+                height="650"
+                fetchpriority="high"
+                loading="eager">
 
-<div class="hero-content">
+        </picture>
 
-<h1>Lira City Chamber of Commerce</h1>
+        <div class="hero-content">
 
-<p>
-Connecting Businesses.
-Supporting Growth.
-Building Prosperity.
-</p>
+            <h2>Growing Business in Northern Uganda</h2>
 
-<a class="cta-button" href="join.html">
-Join the Chamber
-</a>
+            <p>
+                Connecting businesses, investors and the community to build
+                a stronger local economy.
+            </p>
 
-</div>
+            <a href="join.html" class="cta-button">
+                Join the Chamber
+            </a>
 
-</section>
+        </div>
 
-<section class="home-grid">
+    </section>
 
-<section class="events card">
+    <!-- HOME GRID -->
 
-<h2>Current Events</h2>
+    <section class="home-grid">
 
-<ul>
+        <!-- EVENTS -->
 
-<li>Annual Business Expo – August 15</li>
+        <article class="card">
 
-<li>Investment Forum – September 10</li>
+            <h2>Current Events</h2>
 
-<li>SME Digital Skills Workshop</li>
+            <ul>
 
-<li>Farmers Market & Trade Fair</li>
+                <li>Annual Business Networking Summit</li>
 
-</ul>
+                <li>Entrepreneurship Training Workshop</li>
 
-</section>
+                <li>Agricultural Innovation Exhibition</li>
 
-<section class="weather card">
+                <li>Women in Business Conference</li>
 
-<h2>Weather</h2>
+            </ul>
 
-<div id="current-weather">
+        </article>
 
-<p class="loading">Loading weather...</p>
+        <!-- WEATHER -->
 
-</div>
+        <article class="card weather">
 
-<div id="forecast">
+            <h2>Weather</h2>
 
-</div>
+            <div id="current-weather">
 
-</section>
+                <h3 id="temperature">Loading...</h3>
 
-</section>
+                <p id="description"></p>
 
-<section class="spotlights">
+            </div>
 
-<h2>Member Spotlights</h2>
+            <div class="forecast">
 
-<div id="spotlight-container">
+                <h3>3-Day Forecast</h3>
 
-</div>
+                <div id="forecast"></div>
 
-</section>
+            </div>
+
+        </article>
+
+    </section>
+
+    <!-- SPOTLIGHTS -->
+
+    <section>
+
+        <h2 class="spotlight-title">
+
+            Member Spotlights
+
+        </h2>
+
+        <div id="spotlights" class="spotlights">
+
+        </div>
+
+    </section>
 
 </main>
 
 <footer>
 
-<!-- Keep your existing footer -->
+    <section>
+
+        <h3>Lira City Chamber of Commerce</h3>
+
+        <p>Lira City, Northern Uganda</p>
+
+        <p>info@lirachamber.org</p>
+
+        <p>+256 700 000000</p>
+
+    </section>
+
+    <section class="social">
+
+        <a href="#">
+            <img src="images/facebook.svg"
+                alt="Facebook">
+        </a>
+
+        <a href="#">
+            <img src="images/linkedin.svg"
+                alt="LinkedIn">
+        </a>
+
+        <a href="#">
+            <img src="images/x.svg"
+                alt="X">
+        </a>
+
+    </section>
+
+    <section>
+
+        <p>
+
+            &copy;
+            <span id="year"></span>
+
+            Lira City Chamber
+
+        </p>
+
+        <p>
+
+            Ongom Ronald
+
+        </p>
+
+        <p>
+
+            WDD231 Project
+
+        </p>
+
+        <p>
+
+            Last Modified:
+            <span id="lastModified"></span>
+
+        </p>
+
+    </section>
 
 </footer>
+
+<script src="scripts/navigation.js" defer></script>
+
+<script src="scripts/date.js" defer></script>
+
+<script src="scripts/weather.js" defer></script>
+
+<script src="scripts/home.js" defer></script>
 
 </body>
 </html>

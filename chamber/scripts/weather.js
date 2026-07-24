@@ -1,103 +1,148 @@
-// ===============================================
-// Lira City Chamber Weather
-// WDD231 Chamber Project
-// ===============================================
+/* ===========================================
+   Lira City Chamber of Commerce
+   Weather API
+=========================================== */
 
-const apiKey = "be33f449b89ebbfb97594aaa065c7d46";
 // Lira City Coordinates
 const latitude = 2.2499;
 const longitude = 32.8998;
 
-const currentURL =
-`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
+// my own OpenWeather API Key
+const apiKey = "be33f449b89ebbfb97594aaa065c7d46";
+
+const weatherURL =
+`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
 const forecastURL =
-`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
+`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
-const currentWeather = document.querySelector("#current-weather");
-const forecastContainer = document.querySelector("#forecast");
+const temperature = document.querySelector("#temperature");
+const description = document.querySelector("#description");
+const forecast = document.querySelector("#forecast");
 
-async function loadWeather() {
+/* ===========================================
+   CURRENT WEATHER
+=========================================== */
+
+async function getCurrentWeather() {
+
     try {
 
-        const [currentResponse, forecastResponse] = await Promise.all([
-            fetch(currentURL),
-            fetch(forecastURL)
-        ]);
+        const response = await fetch(weatherURL);
 
-        if (!currentResponse.ok || !forecastResponse.ok) {
-            throw new Error("Weather data could not be loaded.");
+        if (!response.ok) {
+            throw Error("Weather data not found.");
         }
 
-        const currentData = await currentResponse.json();
-        const forecastData = await forecastResponse.json();
+        const data = await response.json();
 
-        displayCurrentWeather(currentData);
-        displayForecast(forecastData);
+        displayCurrentWeather(data);
 
     } catch (error) {
-        currentWeather.innerHTML =
-            "<p>Unable to load weather information.</p>";
 
         console.error(error);
+
+        temperature.textContent = "Weather data unavailable";
+
+        description.textContent = "Please try again later.";
+
+        forecast.innerHTML = "";
+
     }
+
 }
+
+/* ===========================================
+   DISPLAY CURRENT WEATHER
+=========================================== */
 
 function displayCurrentWeather(data) {
 
-    const icon =
-        `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+    temperature.innerHTML =
+        `${Math.round(data.main.temp)}°C`;
 
-    currentWeather.innerHTML = `
+    description.textContent =
+        capitalizeWords(data.weather[0].description);
 
-        <img src="${icon}"
-             alt="${data.weather[0].description}">
-
-        <h3>${Math.round(data.main.temp)}°C</h3>
-
-        <p>${capitalize(data.weather[0].description)}</p>
-
-        <p><strong>Humidity:</strong> ${data.main.humidity}%</p>
-
-        <p><strong>Wind:</strong> ${data.wind.speed} m/s</p>
-
-    `;
 }
+
+/* ===========================================
+   FORECAST
+=========================================== */
+
+async function getForecast() {
+
+    try {
+
+        const response = await fetch(forecastURL);
+
+        if (!response.ok) {
+
+            throw Error("Forecast unavailable.");
+
+        }
+
+        const data = await response.json();
+
+        displayForecast(data);
+
+    } catch (error) {
+
+        console.error(error);
+
+    }
+
+}
+
+/* ===========================================
+   DISPLAY 3 DAY FORECAST
+=========================================== */
 
 function displayForecast(data) {
 
-    forecastContainer.innerHTML = "";
+    forecast.innerHTML = "";
 
-    const forecastDays =
-        data.list.filter(item => item.dt_txt.includes("12:00:00"));
+    // Forecast every 24 hours (8 intervals)
 
-    forecastDays.slice(0,3).forEach(day => {
+    const dailyForecast = data.list.filter((item, index) => index % 8 === 0);
+
+    dailyForecast.slice(1,4).forEach(day => {
 
         const card = document.createElement("div");
 
-        card.className = "forecast-card";
+        const date = new Date(day.dt * 1000);
 
-        const date = new Date(day.dt_txt);
+        const weekday = date.toLocaleDateString("en-US", {
+
+            weekday: "short"
+
+        });
 
         card.innerHTML = `
-
-            <h4>${date.toLocaleDateString("en-US",
-            {weekday:"short"})}</h4>
-
+            <h4>${weekday}</h4>
             <p>${Math.round(day.main.temp)}°C</p>
-
-            <p>${capitalize(day.weather[0].description)}</p>
-
         `;
 
-        forecastContainer.appendChild(card);
+        forecast.appendChild(card);
 
     });
 
 }
 
-function capitalize(text) {
-    return text.charAt(0).toUpperCase() + text.slice(1);
+/* ===========================================
+   UTILITIES
+=========================================== */
+
+function capitalizeWords(text) {
+
+    return text.replace(/\b\w/g, letter => letter.toUpperCase());
+
 }
 
-loadWeather();
+/* ===========================================
+   INITIALIZE
+=========================================== */
+
+getCurrentWeather();
+
+getForecast();

@@ -1,132 +1,220 @@
-/* ============================================
+/* ==========================================
+   LARGE SCREEN STYLES
    Lira City Chamber of Commerce
-   Desktop Styles
-   ============================================ */
+==========================================*/
 
 @media only screen and (min-width: 768px) {
 
-    /* ---------- Header ---------- */
+    /* -----------------------------
+       HEADER
+    ------------------------------ */
 
     header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 2rem;
+        padding: 1rem 2rem;
     }
 
-    .logo-area {
-        padding: 1rem 0;
-    }
-
-    /* ---------- Hide Hamburger ---------- */
-
-    #menuButton {
+    #menu {
         display: none;
     }
 
-    /* ---------- Navigation ---------- */
-
-    nav ul {
-        display: flex;
-        gap: .5rem;
+    .navigation {
+        display: flex !important;
+        flex-direction: row;
+        width: auto;
+        gap: .25rem;
     }
 
-    nav li {
+    .navigation a {
         border: none;
-    }
-
-    nav a {
-        padding: 1rem 1.25rem;
-        border-radius: 6px;
+        padding: .75rem 1.2rem;
+        border-radius: 4px;
         transition: background .3s ease;
     }
 
-    nav a:hover {
-        background: var(--secondary);
+    .navigation a:hover {
+        background: var(--secondary-color);
     }
 
-    /* ---------- Hero ---------- */
+    /* -----------------------------
+       HERO
+    ------------------------------ */
 
-    .hero {
-        padding: 3rem;
+    .hero img {
+        height: 520px;
+        object-fit: cover;
+        object-position: center;
     }
 
-    .hero h2 {
-        font-size: 2rem;
+    .hero-content {
+        max-width: 500px;
+        padding: 2rem;
     }
 
-    .hero p {
+    .hero-content h2 {
+        font-size: 2.4rem;
+    }
+
+    .hero-content p {
         font-size: 1.1rem;
-        max-width: 800px;
-        margin: auto;
     }
 
-    /* ---------- Directory Grid ---------- */
-
-    #directory.grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    .cta-button {
+        font-size: 1rem;
+        padding: 1rem 1.8rem;
     }
 
-    /* ---------- Cards ---------- */
-
-    /* Desktop cards inherit mobile base styles and only adjust layout here. */
-
-    /* ---------- List View ---------- */
-
-    /* Desktop list layout is inherited from the base mobile styles in small.css */
-
-    /* ---------- Footer ---------- */
-
-    footer {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-        align-items: start;
-    }
-
-    .footer-social {
-        justify-content: center;
-    }
-
-    .footer-contact,
-    .footer-social,
-    .footer-info {
-        padding: 1rem;
-    }
-
-    .footer-info {
-        text-align: right;
-    }
-
-    .footer-contact {
-        text-align: left;
-    }
+    /* -----------------------------
+       HOME GRID
+    ------------------------------ */
 
     .home-grid {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
 
-    .hero-text {
-        position: absolute;
-        bottom: 30px;
-        left: 30px;
-        max-width: 450px;
-    }
+        display: grid;
 
-    .discover-grid {
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    }
-
-    /* Join Page */
-
-    .join-container {
         grid-template-columns: 2fr 1fr;
-        align-items: start;
+
+        gap: 1.5rem;
+
+        padding: 2rem;
+
+        align-items: stretch;
+
     }
 
-    .membership-cards {
-        position: sticky;
-        top: 1rem;
+    .card {
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: flex-start;
+
+    }
+
+    /* -----------------------------
+       WEATHER
+    ------------------------------ */
+
+    #forecast {
+
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 1rem;
+
+        margin-top: 1rem;
+
+    }
+
+    #forecast div {
+
+        background: #f5f5f5;
+
+        border-radius: 8px;
+
+        padding: 1rem;
+
+        text-align: center;
+
+    }
+
+    /* -----------------------------
+       SPOTLIGHTS
+    ------------------------------ */
+
+    .spotlights {
+
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 2rem;
+
+        padding: 2rem;
+
+    }
+
+    .spotlight-card {
+
+        transition: transform .3s ease,
+                    box-shadow .3s ease;
+
+    }
+
+    .spotlight-card:hover {
+
+        transform: translateY(-6px);
+
+        box-shadow: 0 10px 20px rgba(0,0,0,.18);
+
+    }
+
+    .spotlight-card img {
+
+        width: 140px;
+
+        height: 140px;
+
+        object-fit: contain;
+
+    }
+
+    /* -----------------------------
+       FOOTER
+    ------------------------------ */
+
+    footer {
+
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        align-items: center;
+
+        text-align: left;
+
+        gap: 2rem;
+
+        padding: 2rem;
+
+    }
+
+    footer section {
+
+        margin: 0;
+
+    }
+
+    .social {
+
+        justify-content: center;
+
+    }
+
+}
+
+/* ==========================================
+   EXTRA LARGE SCREENS
+==========================================*/
+
+@media only screen and (min-width:1200px){
+
+    main{
+
+        max-width:1200px;
+
+        margin:auto;
+
+    }
+
+    .hero-content{
+
+        left:8%;
+
     }
 
 }
