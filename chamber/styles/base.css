@@ -6,9 +6,15 @@
     --primary-color: #005f73;
     --secondary-color: #006b70;
     --accent-color: #ee9b00;
+    --accent-hover: #ffb703;
     --light-color: #f8f9fa;
     --dark-color: #222;
+    --black: #000;
     --white: #fff;
+    --border-alpha: rgba(255,255,255,0.15);
+    --hero-overlay: rgba(0,0,0,0.55);
+    --card-shadow: rgba(0,0,0,0.12);
+    --spotlight-shadow: rgba(0,0,0,0.15);
     --max-width: 1200px;
 
     --heading-font: "Montserrat", sans-serif;
@@ -35,7 +41,7 @@ body {
 
 header {
     background: var(--primary-color);
-    color: white;
+    color: var(--white);
     padding: 1rem;
 
     display: flex;
@@ -72,8 +78,8 @@ header {
     position: absolute;
     top: -40px;
     left: 0;
-    background: #000;
-    color: #fff;
+    background: var(--black);
+    color: var(--white);
     padding: .75rem 1rem;
     text-decoration: none;
     z-index: 1000;
@@ -110,7 +116,7 @@ button:focus {
     display: block;
     background: none;
     border: none;
-    color: white;
+    color: var(--white);
     font-size: 2rem;
     cursor: pointer;
 }
@@ -134,10 +140,10 @@ button:focus {
 }
 
 .navigation a {
-    color: white;
+    color: var(--white);
     text-decoration: none;
     padding: .9rem;
-    border-top: 1px solid rgba(255,255,255,.15);
+    border-top: 1px solid var(--border-alpha);
 }
 
 .navigation a:hover {
@@ -146,7 +152,7 @@ button:focus {
 
 .navigation .active {
     background: var(--accent-color);
-    color: black;
+    color: var(--black);
     font-weight: 700;
 }
 
@@ -192,9 +198,9 @@ main > h1 {
 
     transform: translateY(-50%);
 
-    background: rgba(0,0,0,.55);
+    background: var(--hero-overlay);
 
-    color: white;
+    color: var(--white);
 
     width: min(440px, calc(100% - 2rem));
     padding: 1.25rem;
@@ -216,7 +222,7 @@ main > h1 {
 
     background: var(--accent-color);
 
-    color: black;
+    color: var(--black);
 
     padding: .9rem 1.4rem;
 
@@ -230,7 +236,7 @@ main > h1 {
 }
 
 .cta-button:hover {
-    background: #ffb703;
+    background: var(--accent-hover);
 }
 
 .cta-button:focus-visible {
@@ -251,11 +257,11 @@ main > h1 {
 }
 
 .card {
-    background: white;
+    background: var(--white);
 
     border-radius: 8px;
 
-    box-shadow: 0 2px 8px rgba(0,0,0,.12);
+    box-shadow: 0 2px 8px var(--card-shadow);
 
     padding: 1rem;
 }
@@ -307,7 +313,7 @@ main > h1 {
 
 .spotlight-card {
 
-    background: white;
+    background: var(--white);
 
     border-radius: 10px;
 
@@ -315,7 +321,7 @@ main > h1 {
 
     padding: 1rem;
 
-    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+    box-shadow: 0 2px 8px var(--spotlight-shadow);
 
 }
 
@@ -365,7 +371,7 @@ footer {
 
     background: var(--primary-color);
 
-    color: white;
+    color: var(--white);
 
     padding: 2rem 1rem;
 
