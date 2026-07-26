@@ -11,10 +11,10 @@
     --dark-color: #222;
     --black: #000;
     --white: #fff;
-    --border-alpha: rgba(255,255,255,0.15);
-    --hero-overlay: rgba(0,0,0,0.55);
-    --card-shadow: rgba(0,0,0,0.12);
-    --spotlight-shadow: rgba(0,0,0,0.15);
+    --border-alpha: #ffffff26;
+    --hero-overlay: #0000008c;
+    --card-shadow: #0000001f;
+    --spotlight-shadow: #00000026;
     --max-width: 1200px;
 
     --heading-font: "Montserrat", sans-serif;
