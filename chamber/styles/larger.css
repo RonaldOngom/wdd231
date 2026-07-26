@@ -57,7 +57,12 @@
         object-position: center;
     }
 
+    main > h1 {
+        margin: 2rem 0;
+    }
+
     .hero-content {
+        left: 5%;
         max-width: 500px;
         padding: 2rem;
     }
@@ -192,7 +197,7 @@
 
     }
 
-    footer section {
+    footer > div {
 
         margin: 0;
 

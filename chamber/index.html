@@ -58,14 +58,16 @@
     </div>
 
     <button
-    id="menu"
-    aria-label="Open navigation menu"
-    aria-expanded="false">
-</button>
+        id="menu"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="primary-navigation"
+        aria-expanded="false">
+    </button>
 
-    <nav class="navigation">
+    <nav id="primary-navigation" class="navigation" aria-label="Primary navigation">
 
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html" class="active" aria-current="page">Home</a>
 
         <a href="directory.html">Directory</a>
 
@@ -170,7 +172,7 @@
 
     <!-- SPOTLIGHTS -->
 
-    <section>
+    <section class="spotlights-section">
 
         <h2 class="spotlight-title">
 
@@ -188,7 +190,7 @@
 
 <footer>
 
-    <section>
+    <div>
 
         <h3>Lira City Chamber of Commerce</h3>
 
@@ -198,9 +200,9 @@
 
         <p>+256 700 000000</p>
 
-    </section>
+    </div>
 
-    <section class="social">
+    <div class="social" aria-label="Social media links">
 
         <a href="#">
             <img src="images/facebook.svg"
@@ -217,9 +219,9 @@
                 alt="X">
         </a>
 
-    </section>
+    </div>
 
-    <section>
+    <div>
 
         <p>
 
@@ -249,7 +251,7 @@
 
         </p>
 
-    </section>
+    </div>
 
 </footer>
 

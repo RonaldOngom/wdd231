@@ -22,6 +22,11 @@ if (menuButton && navigation) {
             !expanded
         );
 
+        menuButton.setAttribute(
+            "aria-label",
+            expanded ? "Open navigation menu" : "Close navigation menu"
+        );
+
     });
 
 }

@@ -54,10 +54,11 @@ header {
     border-radius: 50%;
 }
 
-.logo h1 {
+.logo h2 {
     margin: 0;
     font-size: 1.4rem;
     font-family: var(--heading-font);
+    line-height: 1.2;
 }
 
 .logo p {
@@ -146,24 +147,35 @@ main {
     margin: auto;
 }
 
+main > h1 {
+    margin: 1.5rem 1rem;
+    color: var(--primary-color);
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    line-height: 1.2;
+}
+
 /* ---------------------------------------
    HERO
 --------------------------------------- */
 
 .hero {
     position: relative;
+    min-height: 360px;
+    overflow: hidden;
 }
 
 .hero img {
     width: 100%;
     display: block;
-    height: auto;
+    height: 360px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .hero-content {
     position: absolute;
 
-    left: 5%;
+    left: 1rem;
     top: 50%;
 
     transform: translateY(-50%);
@@ -172,7 +184,8 @@ main {
 
     color: white;
 
-    padding: 1.5rem;
+    width: min(440px, calc(100% - 2rem));
+    padding: 1.25rem;
 
     border-radius: 8px;
 
@@ -206,6 +219,11 @@ main {
 
 .cta-button:hover {
     background: #ffb703;
+}
+
+.cta-button:focus-visible {
+    outline: 3px solid var(--white);
+    outline-offset: 3px;
 }
 
 /* ---------------------------------------
@@ -343,7 +361,7 @@ footer {
 
 }
 
-footer section {
+footer > div {
 
     margin-bottom: 1.5rem;
 
