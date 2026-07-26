@@ -6,79 +6,54 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Application Received | Lira City Chamber of Commerce</title>
+<title>Thank You | Lira City Chamber of Commerce</title>
 
-<meta name="description"
-content="Thank you for applying for membership in the Lira City Chamber of Commerce.">
+<meta name="description" content="Thank you for applying for membership with the Lira City Chamber of Commerce.">
 
-    <meta name="author"
-    content="Ongom Ronald">
+<meta name="author" content="Ongom Ronald">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Application Received | Lira City Chamber of Commerce">
-    <meta property="og:description"
-        content="Thank you for applying for membership in the Lira City Chamber of Commerce.">
-    <meta property="og:image"
-        content="https://ronaldongom.github.io/wdd231/chamber/images/og-image.webp">
-    <meta property="og:url"
-        content="https://ronaldongom.github.io/wdd231/chamber/thankyou.html">
-    <meta property="og:type" content="website">
+<link rel="icon" href="favicon.ico">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- Google Fonts -->
 
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/larger.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <script src="scripts/navigation.js" defer></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/larger.css">
+<link rel="stylesheet" href="styles/join.css">
+
+<script defer src="scripts/navigation.js"></script>
+<script defer src="scripts/thankyou.js"></script>
 
 </head>
 
 <body>
 
-<a class="skip-link" href="#main-content">Skip to main content</a>
-
 <header>
 
-<div class="logo-area">
+<div class="logo">
 
-<img
-src="images/logo.webp"
-alt="Lira Chamber Logo"
-width="80"
-height="80">
-
-<div>
-
-<p class="site-title">Lira City Chamber of Commerce</p>
-
-<p>Connecting Business • Creating Opportunities</p>
+<h1>Lira City Chamber of Commerce</h1>
 
 </div>
 
-</div>
-
-<button id="menuButton"
-aria-label="Toggle Navigation">
-
-☰
-
-</button>
+<button id="menu"></button>
 
 <nav>
 
-<ul id="primaryNav">
+<ul class="navigation">
 
 <li><a href="index.html">Home</a></li>
 
-<li><a href="directory.html">Directory</a></li>
-
 <li><a href="discover.html">Discover</a></li>
 
-<li><a href="join.html">Join</a></li>
+<li><a href="directory.html">Directory</a></li>
 
-<li><a href="thankyou.html">Thank You</a></li>
+<li><a href="join.html">Join</a></li>
 
 </ul>
 
@@ -86,53 +61,91 @@ aria-label="Toggle Navigation">
 
 </header>
 
-<main id="main-content">
+<main class="join-page">
 
-<section class="thank-you">
+<section class="form-section">
 
-<h1>
-
-Thank You for Your Application!
-
-</h1>
+<h2>🎉 Thank You!</h2>
 
 <p>
 
-Your membership application has been successfully received.
+Thank you for submitting your membership application.
 
-</p>
-
-<p>
-
-Below is the information you submitted.
+Your information has been received successfully.
 
 </p>
 
 <div class="application-summary">
 
-<h2>Application Summary</h2>
+<h3>Application Summary</h3>
 
-<p><strong>First Name:</strong> <span id="firstName"></span></p>
+<table>
 
-<p><strong>Last Name:</strong> <span id="lastName"></span></p>
+<tbody>
 
-<p><strong>Email:</strong> <span id="email"></span></p>
+<tr>
 
-<p><strong>Phone:</strong> <span id="phone"></span></p>
+<th>First Name</th>
 
-<p><strong>Organization:</strong> <span id="organization"></span></p>
+<td id="firstname"></td>
 
-<p><strong>Membership Level:</strong> <span id="membership"></span></p>
+</tr>
 
-<p><strong>Submitted:</strong> <span id="timestamp"></span></p>
+<tr>
+
+<th>Last Name</th>
+
+<td id="lastname"></td>
+
+</tr>
+
+<tr>
+
+<th>Email</th>
+
+<td id="email"></td>
+
+</tr>
+
+<tr>
+
+<th>Mobile Phone</th>
+
+<td id="phone"></td>
+
+</tr>
+
+<tr>
+
+<th>Business Name</th>
+
+<td id="business"></td>
+
+</tr>
+
+<tr>
+
+<th>Date Submitted</th>
+
+<td id="timestamp"></td>
+
+</tr>
+
+</tbody>
+
+</table>
 
 </div>
 
-<a class="join-button" href="index.html">
+<p>
+
+<a class="submit-btn" href="index.html">
 
 Return to Home
 
 </a>
+
+</p>
 
 </section>
 
@@ -140,75 +153,11 @@ Return to Home
 
 <footer>
 
-<div class="footer-contact">
-
-<h3>Lira City Chamber of Commerce</h3>
-
-<p>Coronation Road</p>
-
-<p>Lira City, Uganda</p>
-
-<p>info@lirachamber.org</p>
-
-<p>+256 772 123456</p>
-
-</div>
-
-<div class="footer-social">
-
-<a href="#" aria-label="Facebook">
-
-<img src="images/facebook.svg"
-alt="Facebook"
-width="32"
-height="32">
-
-</a>
-
-<a href="#" aria-label="LinkedIn">
-
-<img src="images/linkedin.svg"
-alt="LinkedIn"
-width="32"
-height="32">
-
-</a>
-
-<a href="#" aria-label="X">
-
-<img src="images/x-social.svg"
-alt="X"
-width="32"
-height="32">
-
-</a>
-
-</div>
-
-<div class="footer-info">
-
 <p>
 
-&copy;
-<span id="year"></span>
-Lira City Chamber of Commerce
+©2026 Lira City Chamber of Commerce
 
 </p>
-
-<p>
-
-Ongom Ronald | WDD 231
-
-</p>
-
-<p>
-
-Last Modification:
-<span id="lastModified"></span>
-
-</p>
-
-</div>
 
 </footer>
 
