@@ -8,6 +8,15 @@
 
 <meta name="description" content="Join the Lira City Chamber of Commerce and become part of a thriving business community.">
 
+<meta property="og:title" content="Join the Lira City Chamber of Commerce Today">
+<meta property="og:description"
+    content="Join the Lira City Chamber of Commerce and become part of a thriving business community.">
+<meta property="og:image"
+    content="https://ronaldongom.github.io/wdd231/chamber/images/og-image.webp">
+<meta property="og:url"
+    content="https://ronaldongom.github.io/wdd231/chamber/join.html">
+<meta property="og:type" content="website">
+
 <meta name="author" content="Ongom Ronald">
 
 <link rel="icon" href="favicon.ico">
@@ -33,7 +42,7 @@
 
 <div class="logo">
 
-<h1>Lira City Chamber of Commerce</h1>
+<h2>Lira City Chamber of Commerce</h2>
 
 </div>
 
@@ -59,7 +68,7 @@
 
 <main class="join-page">
 
-<h2>Membership Application</h2>
+<h1>Join the Lira City Chamber of Commerce Today</h1>
 
 <div class="join-grid">
 
@@ -105,9 +114,8 @@ name="organizationtitle"
 title="Organization Title"
 autocomplete="organization-title"
 
-pattern="[A-Za-z\-\s]{7,}"
-
->
+        pattern="[A-Za-z\s\-]{7,}"
+        placeholder="Managing Director">
 
 </label>
 
@@ -131,17 +139,19 @@ placeholder="example@email.com">
 
 Mobile Phone
 
-<input
-
-type="tel"
-
-name="phone"
-
-required
-
-title="Mobile Number"
-
-autocomplete="tel">
+    <input
+ 
+        type="tel"
+ 
+        name="phone"
+ 
+        required
+ 
+        title="Enter your mobile phone number"
+ 
+        autocomplete="tel"
+ 
+        placeholder="+256 700 123456">
 
 </label>
 
@@ -149,17 +159,19 @@ autocomplete="tel">
 
 Business / Organization Name
 
-<input
-
-type="text"
-
-name="business"
-
-required
-
-title="Business Name"
-
-autocomplete="organization">
+    <input
+ 
+        type="text"
+ 
+        name="business"
+ 
+        required
+ 
+        title="Business or Organization Name"
+ 
+        autocomplete="organization"
+ 
+        placeholder="Kairos Waves Technologies">
 
 </label>
 
@@ -173,7 +185,7 @@ name="membership"
 
 required>
 
-<option value="">Choose One</option>
+<option value="">Select Membership</option>
 
 <option value="np">
 
