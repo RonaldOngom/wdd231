@@ -14,6 +14,7 @@ const membersURL = "data/members.json";
  * Fetch member data using async/await
  */
 async function getMembers() {
+    if (!directory) return;
     try {
         const response = await fetch(membersURL);
 
@@ -41,6 +42,8 @@ async function getMembers() {
  */
 
 function displayMembers(members) {
+
+    if (!directory) return;
 
     directory.innerHTML = "";
 
@@ -83,7 +86,6 @@ function displayMembers(members) {
             <p class="membership">
                 ${getMembershipLevel(member.membership)}
             </p>
-            </p>
         `;
 
         directory.appendChild(card);
@@ -119,34 +121,40 @@ function getMembershipLevel(level) {
  * Grid View
  */
 
-gridButton.addEventListener("click", () => {
+if (gridButton) {
+    gridButton.addEventListener("click", () => {
 
-    directory.classList.add("grid");
+        directory.classList.add("grid");
 
-    directory.classList.remove("list");
+        directory.classList.remove("list");
 
-    gridButton.setAttribute("aria-pressed", "true");
-    listButton.setAttribute("aria-pressed", "false");
+        gridButton.setAttribute("aria-pressed", "true");
+        listButton.setAttribute("aria-pressed", "false");
 
-});
+    });
+}
 
 /**
  * List View
  */
 
-listButton.addEventListener("click", () => {
+if (listButton) {
+    listButton.addEventListener("click", () => {
 
-    directory.classList.add("list");
+        directory.classList.add("list");
 
-    directory.classList.remove("grid");
+        directory.classList.remove("grid");
 
-    listButton.setAttribute("aria-pressed", "true");
-    gridButton.setAttribute("aria-pressed", "false");
+        listButton.setAttribute("aria-pressed", "true");
+        gridButton.setAttribute("aria-pressed", "false");
 
-});
+    });
+}
 
 /**
  * Load members
  */
 
-getMembers();
+if (directory) {
+    getMembers();
+}

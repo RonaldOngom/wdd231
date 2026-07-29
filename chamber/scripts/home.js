@@ -150,4 +150,6 @@ function shuffle(array) {
    START
 ========================================== */
 
-getSpotlights();
+if (spotlightContainer) {
+    getSpotlights();
+}

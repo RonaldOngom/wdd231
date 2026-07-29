@@ -30,15 +30,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const date = new Date(timestamp);
 
-        document.getElementById("timestamp").textContent =
-            date.toLocaleString("en-UG", {
-                dateStyle: "full",
-                timeStyle: "medium"
-            });
+        const timestampElement = document.getElementById("timestamp");
 
+        if (timestampElement) {
+            timestampElement.textContent =
+                date.toLocaleString("en-UG", {
+                    dateStyle: "full",
+                    timeStyle: "medium"
+                });
+        }
     } else {
 
-        document.getElementById("timestamp").textContent = "Not Available";
+        const timestampElement = document.getElementById("timestamp");
+
+        if (timestampElement) {
+            timestampElement.textContent = "Not Available";
+        }
 
     }
 

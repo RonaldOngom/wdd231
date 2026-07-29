@@ -5,8 +5,14 @@
 
 // Current Year
 const currentYear = document.querySelector("#currentyear");
-currentYear.textContent = new Date().getFullYear();
+
+if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
+}
 
 // Last Modified Date
 const lastModified = document.querySelector("#lastModified");
-lastModified.textContent = `Last Modified: ${document.lastModified}`;
+
+if (lastModified) {
+    lastModified.textContent = `Last Modified: ${document.lastModified}`;
+}

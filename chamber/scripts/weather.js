@@ -7,8 +7,8 @@
 const latitude = 2.2499;
 const longitude = 32.8998;
 
-// my own OpenWeather API Key
-const apiKey = "be33f449b89ebbfb97594aaa065c7d46";
+// OpenWeather API Key
+const apiKey = "YOUR_OPENWEATHER_API_KEY";
 
 const weatherURL =
 `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
@@ -42,11 +42,11 @@ async function getCurrentWeather() {
 
         console.error(error);
 
-        temperature.textContent = "Weather data unavailable";
+        if (temperature) temperature.textContent = "Weather data unavailable";
 
-        description.textContent = "Please try again later.";
+        if (description) description.textContent = "Please try again later.";
 
-        forecast.innerHTML = "";
+        if (forecast) forecast.innerHTML = "";
 
     }
 
@@ -57,6 +57,8 @@ async function getCurrentWeather() {
 =========================================== */
 
 function displayCurrentWeather(data) {
+
+    if (!temperature || !description) return;
 
     temperature.innerHTML =
         `${Math.round(data.main.temp)}°C`;
@@ -99,6 +101,8 @@ async function getForecast() {
 =========================================== */
 
 function displayForecast(data) {
+
+    if (!forecast) return;
 
     forecast.innerHTML = "";
 

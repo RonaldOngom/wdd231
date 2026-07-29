@@ -19,7 +19,7 @@
 
 <meta name="author" content="Ongom Ronald">
 
-<link rel="icon" href="favicon.ico">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,9 +47,9 @@
 
 </div>
 
-<button id="menu"></button>
+<button id="menu" type="button" aria-label="Open navigation menu"></button>
 
-<nav>
+<nav aria-label="Primary navigation">
 
 <ul class="navigation">
 
@@ -220,17 +220,19 @@ Gold Membership
 
 <label>
 
-Business Description
+    Business Description
 
-<textarea
+    <textarea
 
-name="description"
+        name="description"
 
-title="Business Description"
+        autocomplete="off"
 
-rows="5"></textarea>
+        title="Business Description"
 
-</label>
+        rows="5"></textarea>
+
+    </label>
 
 <input
 

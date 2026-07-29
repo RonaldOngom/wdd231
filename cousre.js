@@ -67,6 +67,10 @@ const courses = [
 const courseContainer = document.querySelector("#courses");
 const creditDisplay = document.querySelector("#credits");
 
+if (!courseContainer || !creditDisplay) {
+    console.warn("Required course elements not found.");
+}
+
 // Display Courses
 function displayCourses(courseList) {
 
@@ -112,31 +116,42 @@ function displayCredits(courseList) {
 
 // Button Events
 
-document.querySelector("#all").addEventListener("click", () => {
+const allButton = document.querySelector("#all");
+if (allButton) {
+    allButton.addEventListener("click", () => {
 
-    displayCourses(courses);
+        displayCourses(courses);
 
-});
+    });
+}
 
-document.querySelector("#wdd").addEventListener("click", () => {
+const wddButton = document.querySelector("#wdd");
+if (wddButton) {
+    wddButton.addEventListener("click", () => {
 
-    const filtered = courses.filter(course =>
-        course.subject === "WDD"
-    );
+        const filtered = courses.filter(course =>
+            course.subject === "WDD"
+        );
 
-    displayCourses(filtered);
+        displayCourses(filtered);
 
-});
+    });
+}
 
-document.querySelector("#cse").addEventListener("click", () => {
+const cseButton = document.querySelector("#cse");
+if (cseButton) {
+    cseButton.addEventListener("click", () => {
 
-    const filtered = courses.filter(course =>
-        course.subject === "CSE"
-    );
+        const filtered = courses.filter(course =>
+            course.subject === "CSE"
+        );
 
-    displayCourses(filtered);
+        displayCourses(filtered);
 
-});
+    });
+}
 
 // Initial Page Load
-displayCourses(courses);
+if (courseContainer && creditDisplay) {
+    displayCourses(courses);
+}
