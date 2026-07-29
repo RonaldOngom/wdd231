@@ -28,7 +28,6 @@
         border: none;
         padding: .75rem 1.2rem;
         border-radius: 4px;
-        transition: background .3s ease;
     }
 
     .navigation a:hover {
@@ -116,8 +115,6 @@
     }
 
     .spotlight-card {
-        transition: transform .3s ease,
-                    box-shadow .3s ease;
     }
 
     .spotlight-card:hover {
@@ -138,7 +135,6 @@
     footer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        align-items: center;
         text-align: left;
         gap: 2rem;
         padding: 2rem;

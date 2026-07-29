@@ -42,7 +42,6 @@ form {
 label {
     display: flex;
     flex-direction: column;
-    font-weight: 600;
     color: var(--dark-color);
     gap: .4rem;
 }
@@ -55,7 +54,6 @@ textarea {
     border-radius: 6px;
     font-size: 1rem;
     width: 100%;
-    transition: border-color .3s;
 }
 
 textarea {
@@ -77,10 +75,7 @@ textarea:focus {
     border: none;
     padding: 1rem;
     border-radius: 8px;
-    cursor: pointer;
     font-size: 1rem;
-    font-weight: bold;
-    transition: background .3s;
 }
 
 .submit-btn:hover {
@@ -134,7 +129,6 @@ textarea:focus {
 
 .member-card a {
     color: var(--primary);
-    font-weight: bold;
     text-decoration: none;
 }
 
@@ -175,7 +169,6 @@ dialog ul {
     border: none;
     padding: .75rem 1.25rem;
     border-radius: 6px;
-    cursor: pointer;
 }
 
 .close:hover {
@@ -232,7 +225,6 @@ dialog ul {
     color: var(--white);
     text-align: left;
     padding: .8rem;
-    width: 35%;
 }
 
 .application-summary td {
