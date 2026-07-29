@@ -31,7 +31,7 @@
     }
 
     .navigation a:hover {
-        background: var(--secondary-color);
+        background: var(--secondary);
     }
 
     /* -----------------------------
@@ -97,7 +97,7 @@
     }
 
     #forecast div {
-        background: var(--light-color);
+        background: var(--light);
         border-radius: 8px;
         padding: 1rem;
         text-align: center;
