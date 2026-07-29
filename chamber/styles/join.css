@@ -1,10 +1,20 @@
 /* ==========================================
-   JOIN PAGE
-========================================== */
+    JOIN PAGE
+    ========================================== */
+
+:root {
+    --primary: #004b8d;
+    --accent: #d4af37;
+    --dark: #222;
+    --border: #d9d9d9;
+    --radius: 10px;
+    --shadow: 0 4px 12px rgba(0,0,0,.12);
+    --primary-hover: #00376b;
+    --focus-ring: rgba(0,75,141,.3);
+    --overlay: rgba(0,0,0,.5);
+}
 
 .join-page {
-    max-width: 1200px;
-    margin: auto;
     padding: 1rem;
 }
 
@@ -15,8 +25,8 @@
 }
 
 /* ===========================
-   GRID
-=========================== */
+    GRID
+    =========================== */
 
 .join-grid {
     display: grid;
@@ -25,8 +35,8 @@
 }
 
 /* ===========================
-   FORM
-=========================== */
+    FORM
+    =========================== */
 
 .form-section {
     background: var(--white);
@@ -45,294 +55,204 @@ label {
     display: flex;
     flex-direction: column;
     font-weight: 600;
-    color: var(--dark);
+    color: var(--dark-color);
     gap: .4rem;
 }
 
 input,
 select,
 textarea {
-
     padding: .75rem;
-
     border: 1px solid var(--border);
-
     border-radius: 6px;
-
     font-size: 1rem;
-
     width: 100%;
-
-    box-sizing: border-box;
-
     transition: border-color .3s;
+}
 
+textarea {
     resize: vertical;
-
     min-height: 120px;
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-
     outline: none;
-
     border-color: var(--primary);
-
-    box-shadow: 0 0 5px rgba(0,75,141,.3);
+    box-shadow: 0 0 5px var(--focus-ring);
 }
 
 .submit-btn {
-
     background: var(--primary);
-
     color: var(--white);
-
     border: none;
-
     padding: 1rem;
-
     border-radius: 8px;
-
     cursor: pointer;
-
     font-size: 1rem;
-
     font-weight: bold;
-
     transition: background .3s;
 }
 
 .submit-btn:hover {
-
     background: var(--primary-hover);
-
 }
 
 /* ===========================
-   MEMBERSHIP CARDS
-=========================== */
+    MEMBERSHIP CARDS
+    =========================== */
 
 .membership-cards {
-
     display: grid;
-
     gap: 1rem;
 }
 
 .member-card {
-
     background: var(--white);
-
     border-left: 6px solid var(--primary);
-
     padding: 1.25rem;
-
     border-radius: var(--radius);
-
     box-shadow: var(--shadow);
-
     opacity: 0;
-
     transform: translateY(35px);
-
     animation: fadeCard .8s forwards;
 }
 
-.member-card:nth-child(1){
-animation-delay:.2s;
+.member-card:nth-child(1) {
+    animation-delay: .2s;
 }
 
-.member-card:nth-child(2){
-animation-delay:.5s;
+.member-card:nth-child(2) {
+    animation-delay: .5s;
 }
 
-.member-card:nth-child(3){
-animation-delay:.8s;
+.member-card:nth-child(3) {
+    animation-delay: .8s;
 }
 
-.member-card:nth-child(4){
-animation-delay:1.1s;
+.member-card:nth-child(4) {
+    animation-delay: 1.1s;
 }
 
 .member-card h3 {
-
     color: var(--primary);
-
     margin-bottom: .5rem;
 }
 
 .member-card p {
-
     margin-bottom: .75rem;
 }
 
 .member-card a {
-
     color: var(--primary);
-
     font-weight: bold;
-
     text-decoration: none;
 }
 
 .member-card a:hover {
-
     text-decoration: underline;
 }
 
 /* ===========================
-   DIALOG MODAL
-=========================== */
+    DIALOG MODAL
+    =========================== */
 
 dialog {
-
     border: none;
-
     border-radius: var(--radius);
-
     padding: 2rem;
-
     max-width: 450px;
-
     width: 90%;
-
     box-shadow: var(--shadow);
 }
 
 dialog::backdrop {
-
-    background: rgba(0,0,0,.5);
+    background: var(--overlay);
 }
 
 dialog h3 {
-
     color: var(--primary);
-
     margin-bottom: 1rem;
 }
 
 dialog ul {
-
     padding-left: 1.2rem;
-
     margin-bottom: 1.5rem;
 }
 
 .close {
-
     background: var(--primary);
-
     color: var(--white);
-
     border: none;
-
     padding: .75rem 1.25rem;
-
     border-radius: 6px;
-
     cursor: pointer;
 }
+
 .close:hover {
-
     background: var(--primary-hover);
-
 }
 
 /* ===========================
-   PAGE LOAD ANIMATION
-=========================== */
+    PAGE LOAD ANIMATION
+    =========================== */
 
 @keyframes fadeCard {
-
     from {
-
         opacity: 0;
-
         transform: translateY(35px);
-
     }
-
     to {
-
         opacity: 1;
-
         transform: translateY(0);
-
     }
 }
 
 /* ===========================
-   DESKTOP
-=========================== */
+    DESKTOP
+    =========================== */
 
 @media screen and (min-width: 768px) {
+    .join-grid {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
 
-.join-grid {
-
-    grid-template-columns:2fr 1fr;
-
-    align-items:start;
-
-}
-
-.membership-cards{
-
-    position:sticky;
-
-    top:1rem;
-
-}
-
+    .join-page .membership-cards {
+        position: sticky;
+        top: 1rem;
+    }
 }
 
 /* ==========================================
-THANK YOU PAGE
-========================================== */
+    THANK YOU PAGE
+    ========================================== */
 
-.application-summary{
-
-margin-top:2rem;
-
+.application-summary {
+    margin-top: 2rem;
 }
 
-.application-summary table{
-
-width:100%;
-
-border-collapse:collapse;
-
-margin-top:1rem;
-
+.application-summary table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
 }
 
-.application-summary th{
-
-    background:var(--primary);
-
-    color:var(--white);
-
-    text-align:left;
-
-    padding:.8rem;
-
-    width:35%;
-
+.application-summary th {
+    background: var(--primary);
+    color: var(--white);
+    text-align: left;
+    padding: .8rem;
+    width: 35%;
 }
 
-.application-summary td{
-
-    padding:.8rem;
-
-    border:1px solid #ddd;
-
-    background:var(--white);
-
+.application-summary td {
+    padding: .8rem;
+    border: 1px solid var(--border);
+    background: var(--white);
 }
 
-.application-summary tr:nth-child(even){
-
-    background:var(--light-color);
-
+.application-summary tr:nth-child(even) {
+    background: var(--light-color);
 }

@@ -1,27 +1,15 @@
 /* ==========================================
-   LARGE SCREEN STYLES
-   Lira City Chamber of Commerce
-==========================================*/
-
-.business-logo {
-    display: block;
-    width: 100%;
-    max-width: 220px;
-    height: 150px;
-    object-fit: contain;
-    margin: 0 auto 1rem;
-}
+    LARGE SCREEN STYLES
+    Lira City Chamber of Commerce
+    ==========================================*/
 
 @media only screen and (min-width: 768px) {
 
     /* -----------------------------
-       HEADER
+        HEADER
     ------------------------------ */
 
     header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         padding: 1rem 2rem;
     }
 
@@ -48,7 +36,7 @@
     }
 
     /* -----------------------------
-       HERO
+        HERO
     ------------------------------ */
 
     .hero img {
@@ -81,154 +69,95 @@
     }
 
     /* -----------------------------
-       HOME GRID
+        HOME GRID
     ------------------------------ */
 
     .home-grid {
-
         display: grid;
-
         grid-template-columns: 2fr 1fr;
-
         gap: 1.5rem;
-
         padding: 2rem;
-
         align-items: stretch;
-
     }
 
     .card {
-
         display: flex;
-
         flex-direction: column;
-
         justify-content: flex-start;
-
     }
 
     /* -----------------------------
-       WEATHER
+        WEATHER
     ------------------------------ */
 
     #forecast {
-
         display: grid;
-
         grid-template-columns: repeat(3, 1fr);
-
         gap: 1rem;
-
         margin-top: 1rem;
-
     }
 
     #forecast div {
-
         background: var(--light-color);
-
         border-radius: 8px;
-
         padding: 1rem;
-
         text-align: center;
-
     }
 
     /* -----------------------------
-       SPOTLIGHTS
+        SPOTLIGHTS
     ------------------------------ */
 
     .spotlights {
-
         display: grid;
-
         grid-template-columns: repeat(3, 1fr);
-
         gap: 2rem;
-
         padding: 2rem;
-
     }
 
     .spotlight-card {
-
         transition: transform .3s ease,
                     box-shadow .3s ease;
-
     }
 
     .spotlight-card:hover {
-
         transform: translateY(-6px);
-
         box-shadow: 0 10px 20px var(--spotlight-shadow);
-
     }
 
     .spotlight-card img {
-
         width: 140px;
-
         height: 140px;
-
         object-fit: contain;
-
     }
 
     /* -----------------------------
-       FOOTER
+        FOOTER
     ------------------------------ */
 
     footer {
-
         display: grid;
-
         grid-template-columns: repeat(3, 1fr);
-
         align-items: center;
-
         text-align: left;
-
         gap: 2rem;
-
         padding: 2rem;
-
     }
 
     footer > div {
-
         margin: 0;
-
-    }
-
-    .social {
-
-        justify-content: center;
-
     }
 
 }
 
 /* ==========================================
-   EXTRA LARGE SCREENS
-==========================================*/
+    EXTRA LARGE SCREENS
+    ==========================================*/
 
 @media only screen and (min-width:1200px){
 
-    main{
-
-        max-width:1200px;
-
-        margin:auto;
-
-    }
-
     .hero-content{
-
         left:8%;
-
     }
 
 }
