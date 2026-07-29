@@ -2,18 +2,6 @@
     JOIN PAGE
     ========================================== */
 
-:root {
-    --primary: #004b8d;
-    --accent: #d4af37;
-    --dark: #222;
-    --border: #d9d9d9;
-    --radius: 10px;
-    --shadow: 0 4px 12px rgba(0,0,0,.12);
-    --primary-hover: #00376b;
-    --focus-ring: rgba(0,75,141,.3);
-    --overlay: rgba(0,0,0,.5);
-}
-
 .join-page {
     padding: 1rem;
 }
