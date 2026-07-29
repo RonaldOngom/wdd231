@@ -8,7 +8,7 @@ const latitude = 2.2499;
 const longitude = 32.8998;
 
 // OpenWeather API Key
-const apiKey = "YOUR_OPENWEATHER_API_KEY";
+const apiKey = "be33f449b89ebbfb97594aaa065c7d46";
 
 const weatherURL =
 `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
