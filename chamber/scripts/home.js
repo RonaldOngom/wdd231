@@ -153,3 +153,57 @@ function shuffle(array) {
 if (spotlightContainer) {
     getSpotlights();
 }
+
+/* ==========================================
+   VISITOR MESSAGE
+========================================== */
+
+const message = document.querySelector("#visit-message");
+
+const today = Date.now();
+
+const lastVisit = Number(localStorage.getItem("lastVisit"));
+
+if (!lastVisit) {
+
+    message.textContent =
+    "Welcome! Let us know if you have any questions.";
+
+}
+else {
+
+    const days =
+    Math.floor((today - lastVisit) / 86400000);
+
+    if (days < 1) {
+
+        message.textContent =
+        "Back so soon! Awesome!";
+
+    }
+    else if (days === 1) {
+
+        message.textContent =
+        "You last visited 1 day ago.";
+
+    }
+    else {
+
+        message.textContent =
+        `You last visited ${days} days ago.`;
+
+    }
+
+}
+
+localStorage.setItem("lastVisit", today);
+
+/* ==========================================
+   FOOTER DATES
+========================================== */
+
+document.querySelector("#year").textContent =
+new Date().getFullYear();
+
+document.querySelector("#lastModified").textContent =
+`Last Modified: ${document.lastModified}`;

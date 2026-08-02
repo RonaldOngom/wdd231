@@ -1,160 +1,31 @@
-// ============================================
-// Lira City Chamber of Commerce
-// directory.js
-// Fetch member data and display directory
-// ============================================
+import { places } from "../data/places.mjs";
 
-const directory = document.querySelector("#directory");
-const gridButton = document.querySelector("#gridView");
-const listButton = document.querySelector("#listView");
+const container = document.querySelector("#discover-grid");
 
-const membersURL = "data/members.json";
+places.forEach(place => {
 
-/**
- * Fetch member data using async/await
- */
-async function getMembers() {
-    if (!directory) return;
-    try {
-        const response = await fetch(membersURL);
+    const card = document.createElement("article");
+    card.classList.add("card");
 
-        if (!response.ok) {
-            throw new Error(`HTTP Error: ${response.status}`);
-        }
+    card.innerHTML = `
+        <h2>${place.name}</h2>
 
-        const members = await response.json();
-
-        displayMembers(members);
-
-    } catch (error) {
-        console.error("Unable to load chamber member data.", error);
-
-        directory.innerHTML = `
-            <p class="error">
-                Sorry, member information is currently unavailable.
-            </p>
-        `;
-    }
-}
-
-/**
- * Display member cards
- */
-
-function displayMembers(members) {
-
-    if (!directory) return;
-
-    directory.innerHTML = "";
-
-    members.forEach(member => {
-
-        const card = document.createElement("section");
-        card.classList.add("member-card");
-
-        card.innerHTML = `
+        <figure>
             <img
-                src="${member.image}"
-                alt="${member.name} Logo"
-                class="business-logo"
+                src="${place.image}"
+                alt="${place.name}"
                 loading="lazy"
-                width="200"
-                height="120">
+                width="300"
+                height="200">
+        </figure>
 
-            <h2>${member.name}</h2>
+        <address>${place.address}</address>
 
-            <p>${member.description}</p>
+        <p>${place.description}</p>
 
-            <p><strong>Industry:</strong> ${member.industry}</p>
+        <button>Learn More</button>
+    `;
 
-            <p><strong>Address:</strong> ${member.address}</p>
+    container.appendChild(card);
 
-            <p><strong>Phone:</strong> ${member.phone}</p>
-
-            <p>
-                <a href="${member.website}"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    ${member.website}
-                </a>
-            </p>
-
-            <p><strong>Email:</strong> ${member.email}</p>
-
-            <p><strong>Established:</strong> ${member.established}</p>
-
-            <p class="membership">
-                ${getMembershipLevel(member.membership)}
-            </p>
-        `;
-
-        directory.appendChild(card);
-
-    });
-
-}
-
-/**
- * Membership labels
- */
-
-function getMembershipLevel(level) {
-
-    switch (level) {
-
-        case 1:
-            return '<span class="member">Member</span>';
-
-        case 2:
-            return '<span class="silver">Silver</span>';
-
-        case 3:
-            return '<span class="gold">Gold</span>';
-
-        default:
-            return '<span class="member">Member</span>';
-    }
-
-}
-
-/**
- * Grid View
- */
-
-if (gridButton) {
-    gridButton.addEventListener("click", () => {
-
-        directory.classList.add("grid");
-
-        directory.classList.remove("list");
-
-        gridButton.setAttribute("aria-pressed", "true");
-        listButton.setAttribute("aria-pressed", "false");
-
-    });
-}
-
-/**
- * List View
- */
-
-if (listButton) {
-    listButton.addEventListener("click", () => {
-
-        directory.classList.add("list");
-
-        directory.classList.remove("grid");
-
-        listButton.setAttribute("aria-pressed", "true");
-        gridButton.setAttribute("aria-pressed", "false");
-
-    });
-}
-
-/**
- * Load members
- */
-
-if (directory) {
-    getMembers();
-}
+});
