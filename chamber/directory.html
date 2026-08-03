@@ -1,209 +1,261 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Lira City Chamber of Commerce | Business Directory</title>
+    <title>Business Directory | Lira City Chamber of Commerce</title>
 
     <meta name="description"
-        content="Official business directory for the Lira City Chamber of Commerce. Discover local businesses, services, and organizations in Northern Uganda.">
+        content="Explore businesses, organizations, and services that are members of the Lira City Chamber of Commerce in Northern Uganda.">
+    <meta name="author" content="Ronald Ongom">
 
-    <meta name="author" content="Ongom Ronald">
-
-    <link rel="icon" href="favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Lira City Chamber of Commerce">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Lira City Chamber of Commerce Business Directory">
     <meta property="og:description"
-        content="Explore businesses and organizations that make Lira City a vibrant place to live, work, and invest.">
+        content="Browse businesses, organizations, and services in Lira City, Uganda.">
     <meta property="og:image"
         content="https://ronaldongom.github.io/wdd231/chamber/images/og-image.webp">
     <meta property="og:url"
         content="https://ronaldongom.github.io/wdd231/chamber/directory.html">
     <meta property="og:type" content="website">
 
-<!-- Normalize -->
-<link rel="stylesheet" href="styles/normalize.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-<!-- Main Styles -->
-<link rel="stylesheet" href="styles/base.css">
-<link rel="stylesheet" href="styles/larger.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
 
     <!-- JavaScript -->
     <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
     <script src="scripts/directory.js" defer></script>
+
 </head>
 
-<body class="chamber-page">
+<body>
 
-<a class="skip-link" href="#main-content">Skip to main content</a>
+    <!-- Accessibility -->
+    <a class="skip-link" href="#main-content">Skip to Main Content</a>
 
-<header>
+    <header>
 
-<div class="logo-area">
+        <div class="logo">
 
-<img src="images/logo.webp"
-     alt="Lira City Chamber Logo"
-     width="80"
-     height="80">
+            <img src="images/logo.webp"
+                alt="Lira City Chamber of Commerce Logo"
+                width="80"
+                height="80">
 
-<div>
+            <div>
 
-<p class="site-title">Lira City Chamber of Commerce</p>
+                <h1 class="site-title">
+                    Lira City Chamber of Commerce
+                </h1>
 
-<p>Connecting Businesses • Growing Communities</p>
+                <p class="tagline">
+                    Connecting Businesses • Growing Communities
+                </p>
 
-</div>
+            </div>
 
-</div>
+        </div>
 
-<button id="menuButton"
-aria-label="Open Navigation"
-aria-expanded="false"
-type="button">
+        <button id="menu"
+            aria-label="Toggle Navigation Menu"
+            aria-expanded="false"
+            aria-controls="primary-navigation">
+            ☰
+        </button>
 
-☰
+        <nav id="primary-navigation"
+            class="navigation"
+            aria-label="Primary Navigation">
 
-</button>
+            <a href="index.html">Home</a>
 
-<nav role="navigation" aria-label="Primary navigation">
+            <a href="directory.html"
+                class="active"
+                aria-current="page">
+                Directory
+            </a>
 
-<ul id="primaryNav">
+            <a href="discover.html">Discover</a>
 
-<li><a href="index.html">Home</a></li>
+            <a href="join.html">Join</a>
 
-<li><a href="directory.html">Directory</a></li>
+        </nav>
 
-<li><a href="discover.html">Discover</a></li>
+    </header>
 
-<li><a href="join.html">Join</a></li>
+    <main id="main-content">
 
-<li><a href="thankyou.html">Thank You</a></li>
+        <section class="hero">
 
-</ul>
+            <div class="hero-content">
 
-</nav>
+                <h2>Business Directory</h2>
 
-</header>
+                <p>
 
-<main id="main-content">
+                    Discover trusted businesses, organizations,
+                    educational institutions, healthcare providers,
+                    financial institutions, and professional services
+                    that belong to the Lira City Chamber of Commerce.
 
-<section class="hero">
+                </p>
 
-<h1>Business Directory</h1>
+            </div>
 
-<p>
+        </section>
 
-Discover trusted businesses, organizations, and service providers that
-are members of the Lira City Chamber of Commerce.
+        <section
+            class="view-controls"
+            aria-label="Directory View Options">
 
-</p>
+            <button
+                id="gridView"
+                class="active-view"
+                aria-pressed="true">
 
-</section>
+                ⬛ Grid View
 
-<div class="view-controls">
+            </button>
 
-<button id="gridView" type="button" aria-pressed="true">
+            <button
+                id="listView"
+                aria-pressed="false">
 
-⬛ Grid View
+                📋 List View
 
-</button>
+            </button>
 
-<button id="listView" type="button" aria-pressed="false">
+        </section>
 
-📋 List View
+        <section class="directory-section">
 
-</button>
+            <h2 class="visually-hidden">
+                Chamber Member Directory
+            </h2>
 
-</div>
+            <div
+                id="directory"
+                class="directory-grid"
+                aria-live="polite">
 
-<div
-id="directory"
-class="grid">
+                <!-- Member cards generated by JavaScript -->
 
-<!-- Member cards inserted here dynamically -->
+            </div>
 
-</div>
+        </section>
 
-</main>
+    </main>
 
-<footer>
+    <footer>
 
-<div class="footer-contact">
+        <section class="footer-contact">
 
-<h2>Lira City Chamber of Commerce</h2>
+            <h2>Lira City Chamber of Commerce</h2>
 
-<p>Coronation Road</p>
+            <address>
 
-<p>Lira City, Uganda</p>
+                Coronation Road<br>
+                Lira City, Uganda<br>
 
-<p>info@lirachamber.org</p>
+                Phone:
+                <a href="tel:+256772123456">
+                    +256 772 123456
+                </a>
 
-<p>+256 772 123456</p>
+                <br>
 
-</div>
+                Email:
 
-<div class="footer-social">
+                <a href="mailto:info@lirachamber.org">
+                    info@lirachamber.org
+                </a>
 
-<a href="#" aria-label="Facebook">
+            </address>
 
-<img src="images/facebook.svg"
-alt="Facebook"
-width="32"
-height="32">
+        </section>
 
-</a>
+        <section class="footer-social">
 
-<a href="#" aria-label="LinkedIn">
+            <h2 class="visually-hidden">
+                Social Media
+            </h2>
 
-<img src="images/linkedin.svg"
-alt="LinkedIn"
-width="32"
-height="32">
+            <a href="#"
+                aria-label="Facebook">
 
-</a>
+                <img src="images/facebook.svg"
+                    alt=""
+                    width="32"
+                    height="32">
 
-<a href="#" aria-label="X">
+            </a>
 
-<img src="images/x-social.svg"
-alt="X"
-width="32"
-height="32">
+            <a href="#"
+                aria-label="LinkedIn">
 
-</a>
+                <img src="images/linkedin.svg"
+                    alt=""
+                    width="32"
+                    height="32">
 
-</div>
+            </a>
 
-<div class="footer-info">
+            <a href="#"
+                aria-label="X">
 
-<p>
+                <img src="images/x.svg"
+                    alt=""
+                    width="32"
+                    height="32">
 
-&copy;
-<span id="year"></span>
-Lira City Chamber of Commerce
+            </a>
 
-</p>
+        </section>
 
-<p>
+        <section class="footer-info">
 
-Ongom Ronald | WDD 231
+            <p>
 
-</p>
+                &copy;
+                <span id="year"></span>
 
-<p>
+                Lira City Chamber of Commerce
 
-Last Modification:
-<span id="lastModified"></span>
+            </p>
 
-</p>
+            <p>
 
-</div>
+                Ronald Ongom | WDD 231
 
-</footer>
+            </p>
+
+            <p>
+
+                Last Modified:
+
+                <span id="lastModified"></span>
+
+            </p>
+
+        </section>
+
+    </footer>
 
 </body>
+
 </html>

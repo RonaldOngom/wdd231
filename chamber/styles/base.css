@@ -378,8 +378,17 @@ footer > div {
 }
 
 /* ---------------------------------------
-   UTILITIES
+    UTILITIES
 --------------------------------------- */
+
+.directory-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.directory-list {
+    display: block;
+}
 
 img {
     max-width: 100%;

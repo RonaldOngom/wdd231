@@ -1,31 +1,79 @@
-import { places } from "../data/places.mjs";
+function displayMembers(members) {
 
-const container = document.querySelector("#discover-grid");
+    const directory = document.querySelector("#directory");
 
-places.forEach(place => {
+    directory.innerHTML = "";
 
-    const card = document.createElement("article");
-    card.classList.add("card");
+    members.forEach(member => {
 
-    card.innerHTML = `
-        <h2>${place.name}</h2>
+        const card = document.createElement("article");
 
-        <figure>
+        card.classList.add("member-card");
+
+        card.innerHTML = `
+
             <img
-                src="${place.image}"
-                alt="${place.name}"
-                loading="lazy"
-                width="300"
-                height="200">
-        </figure>
+                src="${member.image}"
+                alt="${member.name}"
+                class="member-image"
+                width="320"
+                height="200"
+                loading="lazy">
 
-        <address>${place.address}</address>
+            <div class="member-content">
 
-        <p>${place.description}</p>
+                <h2>${member.name}</h2>
 
-        <button>Learn More</button>
-    `;
+                <p>${member.description}</p>
 
-    container.appendChild(card);
+                <p><strong>Industry:</strong> ${member.industry}</p>
 
-});
+                <p><strong>Address:</strong> ${member.address}</p>
+
+                <p><strong>Phone:</strong> ${member.phone}</p>
+
+                <p>
+
+                    <strong>Website:</strong>
+
+                    <a href="${member.website}"
+                       target="_blank"
+                       rel="noopener">
+
+                        ${member.website}
+
+                    </a>
+
+                </p>
+
+                <p>
+
+                    <strong>Email:</strong>
+
+                    ${member.email}
+
+                </p>
+
+                <p>
+
+                    <strong>Established:</strong>
+
+                    ${member.established}
+
+                </p>
+
+                <p class="membership">
+
+                    ${membershipLevel(member.membership)}
+
+                </p>
+
+            </div>
+
+        `;
+
+        directory.appendChild(card);
+
+    });
+
+}

@@ -1,94 +1,242 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Discover Lira City | Lira City Chamber of Commerce</title>
 
-    <meta name="description" content="Discover attractions, history, culture, and investment opportunities in Lira City, Uganda.">
+    <meta name="description"
+        content="Discover the history, culture, attractions, demographics, and investment opportunities in Lira City, Uganda.">
+
     <meta name="author" content="Ronald Ongom">
 
-    <link rel="icon" href="images/favicon.ico">
+    <meta property="og:title" content="Discover Lira City">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/og-image.webp">
+    <meta property="og:url"
+        content="https://ronaldongom.github.io/wdd231/chamber/discover.html">
+
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/discover.css">
 
-    <script type="module" src="scripts/discover.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/discover.js" defer></script>
+
 </head>
 
 <body>
 
+<a class="skip-link" href="#main-content">
+    Skip to Main Content
+</a>
+
 <header>
 
     <div class="logo">
-        <img src="images/logo.webp" alt="Lira Chamber Logo" width="70" height="70">
+
+        <img
+            src="images/logo.webp"
+            alt="Lira City Chamber Logo"
+            width="70"
+            height="70">
+
         <div>
-            <h1>Lira City Chamber of Commerce</h1>
+
+            <h2>Lira City Chamber of Commerce</h2>
+
             <p>Connecting Business • Building Community</p>
+
         </div>
+
     </div>
 
-    <button id="menu"></button>
+    <button
+        id="menu"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="primary-navigation"
+        aria-expanded="false">
+        <span class="visually-hidden">Menu</span>
+    </button>
 
-    <nav class="navigation">
+    <nav id="primary-navigation" class="navigation" aria-label="Primary navigation">
 
         <a href="index.html">Home</a>
 
         <a href="directory.html">Directory</a>
 
-        <a href="join.html">Join</a>
+        <a href="discover.html" class="active" aria-current="page">Discover</a>
 
-        <a href="discover.html" class="active">Discover</a>
+        <a href="join.html">Join</a>
 
     </nav>
 
 </header>
 
-<main>
+<main id="main-content">
 
-<section class="hero">
+    <!-- Hero -->
 
-<h2>Discover Lira City</h2>
+    <section class="discover-hero">
 
-<p>
-Explore the culture, history, tourism, education,
-business opportunities and beautiful places that make
-Lira City one of Northern Uganda's fastest growing cities.
-</p>
+        <picture>
 
-</section>
+            <source
+                media="(min-width:900px)"
+                srcset="images/lira-city-large.webp">
 
-<section id="visit-message" class="visit-message">
+            <img
+                src="images/lira-city.webp"
+                alt="Aerial view of Lira City"
+                width="1200"
+                height="600"
+                loading="eager">
 
-</section>
+        </picture>
 
-<section id="discover-grid" class="discover-grid">
+        <div class="hero-text">
 
-<!-- Cards created by JavaScript -->
+            <h1>Discover Lira City</h1>
 
-</section>
+            <p>
+
+                Explore the rich history, vibrant culture,
+                thriving businesses, educational institutions,
+                tourist attractions, and investment opportunities
+                that make Lira City one of Northern Uganda's
+                fastest-growing commercial centres.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Visitor Message -->
+
+    <section
+        id="visit-message"
+        class="visit-message"
+        aria-live="polite">
+
+    </section>
+
+    <!-- Demographics -->
+
+    <section class="community-info">
+
+        <h2>About Lira City</h2>
+
+        <p>
+
+            Lira City is the commercial, educational, and
+            administrative centre of the Lango Sub-region.
+            The city continues to attract investment in
+            agriculture, education, healthcare, hospitality,
+            technology, and trade.
+
+        </p>
+
+    </section>
+
+    <!-- Discover Cards -->
+
+    <section>
+
+        <h2>Places to Discover</h2>
+
+        <div
+            id="discover-grid"
+            class="discover-grid">
+
+            <!-- JavaScript will build the 8 cards -->
+
+        </div>
+
+    </section>
 
 </main>
 
 <footer>
 
-<p>
+    <section>
 
-&copy; <span id="year"></span>
+        <h3>Lira City Chamber of Commerce</h3>
 
-Lira City Chamber of Commerce |
-Ronald Ongom |
-WDD231 Project
+        <p>Lira City, Northern Uganda</p>
 
-</p>
+        <p>info@lirachamber.org</p>
 
-<p id="lastModified"></p>
+        <p>+256 700 000000</p>
+
+    </section>
+
+    <section class="social">
+
+        <a href="#">
+            <img src="images/facebook.svg"
+                 alt="Facebook">
+        </a>
+
+        <a href="#">
+            <img src="images/linkedin.svg"
+                 alt="LinkedIn">
+        </a>
+
+        <a href="#">
+            <img src="images/x.svg"
+                 alt="X">
+        </a>
+
+    </section>
+
+    <section>
+
+        <p>
+
+            &copy;
+            <span id="year"></span>
+
+            Lira City Chamber of Commerce
+
+        </p>
+
+        <p>
+
+            Ronald Ongom
+
+        </p>
+
+        <p>
+
+            WDD231 Project
+
+        </p>
+
+        <p>
+
+            Last Modified:
+            <span id="lastModified"></span>
+
+        </p>
+
+    </section>
 
 </footer>
 
 </body>
+
 </html>

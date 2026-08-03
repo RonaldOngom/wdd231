@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Kairos Waves Technologies",
+    "address": "Plot 12 Bala Road, Lira City",
+    "description": "A technology company providing software development, web design, networking, and IT solutions for businesses across Northern Uganda.",
+    "image": "images/kairos-waves.webp",
+    "button": "Learn More"
+  },
+  {
+    "name": "Lango Hotel",
+    "address": "Senior Quarters, Lira City",
+    "description": "One of the leading hotels in Lira offering accommodation, conference facilities, and restaurant services.",
+    "image": "images/lango-hotel.webp",
+    "button": "Learn More"
+  },
+  {
+    "name": "Lira University",
+    "address": "Lira–Soroti Road",
+    "description": "A public university offering quality education, research, and innovation for Northern Uganda.",
+    "image": "images/lira-university.webp",
+    "button": "Learn More"
+  },
+  {
+    "name": "Lira Medical Centre",
+    "address": "Obote Avenue",
+    "description": "A modern healthcare facility offering outpatient, inpatient, laboratory, and emergency medical services.",
+    "image": "images/medical-centre.webp",
+    "button": "Learn More"
+  },
+  {
+    "name": "Lira Farmers Cooperative",
+    "address": "Erute Road",
+    "description": "Supporting farmers with training, quality agricultural inputs, and produce marketing.",
+    "image": "images/farmers-cooperative.webp",
+    "button": "Learn More"
+  },
+  {
+    "name": "Lira Tech Hub",
+    "address": "Innovation Centre",
+    "description": "Supporting innovation, startups, coding bootcamps, and digital entrepreneurship.",
+    "image": "images/lira-tech.webp",
+    "button": "Learn More"
+  },
+  {
+    "name": "Lira Central Market",
+    "address": "Town Centre",
+    "description": "The largest fresh produce and commercial market serving Lango and surrounding districts.",
+    "image": "images/market.webp",
+    "button": "Learn More"
+  },
+  {
+    "name": "Northern Agriculture",
+    "address": "Industrial Area",
+    "description": "Providing quality farm equipment, seeds, fertilizers, and irrigation systems.",
+    "image": "images/agriculture.webp",
+    "button": "Learn More"
+  }
+]
