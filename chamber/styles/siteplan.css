@@ -90,7 +90,7 @@ table{
 table th{
 
     background:var(--primary);
-    color:white;
+    color:var(--white);
     padding:12px;
 
 }
@@ -121,7 +121,7 @@ pre{
 footer{
 
     background:var(--primary);
-    color:white;
+    color:var(--white);
     text-align:center;
     padding:20px;
     margin-top:30px;
