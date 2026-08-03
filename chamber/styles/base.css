@@ -20,7 +20,6 @@
     --hero-overlay: #0000008c;
     --card-shadow: #0000001f;
     --spotlight-shadow: #00000026;
-    --border-alpha: #ffffff26;
     --max-width: 1200px;
     --heading-font: "Montserrat", sans-serif;
     --body-font: "Roboto", sans-serif;
@@ -146,7 +145,6 @@ button:focus {
 
 .navigation a {
     color: var(--white);
-    text-decoration: none;
     padding: .9rem;
 }
 
@@ -190,7 +188,6 @@ main > h1 {
     display: block;
     height: 360px;
     object-fit: cover;
-    object-position: center;
 }
 
 .hero-content {
@@ -295,7 +292,6 @@ main > h1 {
 
 .spotlight-card img {
     width: 120px;
-    height: auto;
     object-fit: contain;
     margin-bottom: 1rem;
 }
