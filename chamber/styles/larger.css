@@ -114,9 +114,6 @@
         padding: 2rem;
     }
 
-    .spotlight-card {
-    }
-
     .spotlight-card:hover {
         transform: translateY(-6px);
         box-shadow: 0 10px 20px var(--spotlight-shadow);

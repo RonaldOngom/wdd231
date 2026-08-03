@@ -1,5 +1,5 @@
 /* ---------------------------------------
-   GLOBAL STYLES
+    GLOBAL STYLES
 --------------------------------------- */
 
 :root {
@@ -22,7 +22,6 @@
     --spotlight-shadow: #00000026;
     --border-alpha: #ffffff26;
     --max-width: 1200px;
-
     --heading-font: "Montserrat", sans-serif;
     --body-font: "Roboto", sans-serif;
 }
@@ -42,14 +41,13 @@ body {
 }
 
 /* ---------------------------------------
-   HEADER
+    HEADER
 --------------------------------------- */
 
 header {
     background: var(--primary);
     color: var(--white);
     padding: 1rem;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,16 +67,17 @@ header {
 .logo h2 {
     margin: 0;
     font-size: 1.4rem;
-    font-family: var(--heading-font);
     line-height: 1.2;
 }
 
 .logo p {
     margin: 0;
     font-size: .85rem;
-} /* ==========================================
-   ACCESSIBILITY
-========================================== */
+}
+
+/* ==========================================
+    ACCESSIBILITY
+========================================= */
 
 .skip-link {
     position: absolute;
@@ -108,7 +107,6 @@ header {
     border: 0;
 }
 
-/* Visible keyboard focus */
 a:focus,
 button:focus {
     outline: 3px solid var(--accent);
@@ -116,7 +114,7 @@ button:focus {
 }
 
 /* ---------------------------------------
-   NAVIGATION
+    NAVIGATION
 --------------------------------------- */
 
 #menu {
@@ -162,7 +160,7 @@ button:focus {
 }
 
 /* ---------------------------------------
-   MAIN
+    MAIN
 --------------------------------------- */
 
 main {
@@ -178,7 +176,7 @@ main > h1 {
 }
 
 /* ---------------------------------------
-   HERO
+    HERO
 --------------------------------------- */
 
 .hero {
@@ -231,35 +229,33 @@ main > h1 {
 }
 
 /* ---------------------------------------
-   HOME GRID
+    HOME GRID
 --------------------------------------- */
 
 .home-grid {
     display: grid;
-
     gap: 1rem;
+    padding: 1rem;
+}
 
+.card,
+.spotlight-card {
+    background: var(--white);
     padding: 1rem;
 }
 
 .card {
-    background: var(--white);
-
     border-radius: 8px;
-
     box-shadow: 0 2px 8px var(--card-shadow);
-
-    padding: 1rem;
 }
 
 .card h2 {
     margin-top: 0;
-
     color: var(--primary);
 }
 
 /* ---------------------------------------
-   WEATHER
+    WEATHER
 --------------------------------------- */
 
 .weather h3 {
@@ -276,59 +272,37 @@ main > h1 {
 }
 
 /* ---------------------------------------
-   SPOTLIGHTS
+    SPOTLIGHTS
 --------------------------------------- */
 
 .spotlight-title {
     text-align: center;
-
     color: var(--primary);
-
     margin-top: 2rem;
 }
 
 .spotlights {
-
     display: grid;
-
     gap: 1.5rem;
-
     padding: 1rem;
-
 }
 
 .spotlight-card {
-
-    background: var(--white);
-
     border-radius: 10px;
-
     text-align: center;
-
-    padding: 1rem;
-
     box-shadow: 0 2px 8px var(--spotlight-shadow);
-
 }
 
 .spotlight-card img {
-
     width: 120px;
-
     height: auto;
-
     object-fit: contain;
-
     margin-bottom: 1rem;
-
 }
 
 .spotlight-card h3 {
-
     color: var(--primary);
-
     margin: .5rem 0;
-
 }
 
 .spotlight-card a {
@@ -336,13 +310,11 @@ main > h1 {
 }
 
 .spotlight-card a:hover {
-
     text-decoration: underline;
-
 }
 
 /* ---------------------------------------
-   FOOTER
+    FOOTER
 --------------------------------------- */
 
 footer {
@@ -354,27 +326,18 @@ footer {
 }
 
 footer > div {
-
     margin-bottom: 1.5rem;
-
 }
 
 .social {
-
     display: flex;
-
     justify-content: center;
-
     gap: 1rem;
-
 }
 
 .social img {
-
     width: 34px;
-
     height: 34px;
-
 }
 
 /* ---------------------------------------
@@ -384,10 +347,6 @@ footer > div {
 .directory-grid {
     display: grid;
     gap: 1.5rem;
-}
-
-.directory-list {
-    display: block;
 }
 
 img {
