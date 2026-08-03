@@ -10,7 +10,7 @@
     --secondary:#F4B400;
     --light:#F5F5F5;
     --white:#ffffff;
-    --text:#222;
+    --text:#222222;
 
 }
 
@@ -97,7 +97,7 @@ table th{
 
 table td{
 
-    border:1px solid #ccc;
+    border:1px solid #cccccc;
     padding:12px;
 
 }
