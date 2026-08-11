@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kairos Waves Technologies provides professional software development, web design, IT consulting, and IoT solutions.">
+    <meta name="author" content="Ongom Ronald">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Home | Kairos Waves Technologies">
+    <meta property="og:description" content="Innovative digital solutions, web development, and tech services.">
+    <meta property="og:image" content="https://ronaldongom.github.io/wdd231/final/images/og-image.webp">
+    <meta property="og:url" content="https://ronaldongom.github.io/wdd231/final/index.html">
+    <meta property="og:type" content="website">
+
+    <title>Home | Kairos Waves Technologies</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="images/favicon.webp">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/styles.css">
+    <script type="module" src="scripts/main.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to Main Content</a>
+
+<header>
+    <div class="logo-area">
+        <h1>Kairos<span>Waves</span></h1>
+        <p class="page-title">Home</p>
+    </div>
+    <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">&#9776;</button>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="main-content">
+    <section class="hero">
+        <h2>Shaping the Future with Digital Innovation</h2>
+        <p>We deliver elite software development, robust cybersecurity, responsive web engineering, and custom IoT systems tailored to your organizational goals.</p>
+        <a href="services.html" class="btn">Explore Our Services</a>
+    </section>
+
+    <section>
+        <h2 style="text-align: center; color: var(--primary-dark); margin-bottom: 1.5rem;">Core Expertise</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>Modern, responsive, and high-performance websites engineered with clean semantic standards and zero bulky frameworks.</p>
+                <a href="services.html" class="btn">Learn More</a>
+            </div>
+            <div class="card">
+                <h3>Custom Software</h3>
+                <p>Scalable cloud ERPs, educational management portals, and automated business utilities built to exact specifications.</p>
+                <a href="services.html" class="btn">Learn More</a>
+            </div>
+            <div class="card">
+                <h3>IoT & Hardware</h3>
+                <p>Smart automation hubs, agricultural monitoring systems, and embedded microcontroller solutions.</p>
+                <a href="services.html" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section style="margin-top: 3rem;">
+        <h2 style="text-align: center; color: var(--primary-dark); margin-bottom: 1.5rem;">Request Consultation</h2>
+        <form action="thankyou.html" method="GET">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="service">Interested Service</label>
+                <select id="service" name="service">
+                    <option value="Web Development">Web Development</option>
+                    <option value="Software Systems">Software Systems</option>
+                    <option value="IoT Hardware">IoT Hardware</option>
+                    <option value="Cybersecurity">Cybersecurity</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Project Details</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn">Submit Inquiry</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Kairos Waves Technologies | Ongom Ronald | WDD 231</p>
+    <p>
+        <a href="https://www.youtube.com/watch?v=example" target="_blank" rel="noopener noreferrer">Video Demonstration</a> | 
+        <a href="attributions.html">Attributions</a>
+    </p>
+</footer>
+
+</body>
+</html>

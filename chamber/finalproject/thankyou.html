@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Form submission confirmation page for Kairos Waves Technologies.">
+    <meta name="author" content="Ongom Ronald">
+    <title>Submission Confirmed | Kairos Waves Technologies</title>
+    <link rel="icon" type="image/webp" href="images/favicon.webp">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script type="module" src="scripts/main.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to Main Content</a>
+
+<header>
+    <div class="logo-area">
+        <h1>Kairos<span>Waves</span></h1>
+        <p class="page-title">Thank You</p>
+    </div>
+    <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">&#9776;</button>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="main-content">
+    <section class="hero">
+        <h2>Inquiry Received Successfully</h2>
+        <p>Thank you for reaching out. Here are the details of your submitted inquiry:</p>
+    </section>
+
+    <div class="card" style="max-width: 600px; margin: 0 auto;">
+        <h3>Submitted Information Summary</h3>
+        <div id="results-display" style="margin-top: 1rem; line-height: 1.8;"></div>
+        <div style="margin-top: 1.5rem; text-align: center;">
+            <a href="index.html" class="btn">Return to Home</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Kairos Waves Technologies | Ongom Ronald | WDD 231</p>
+    <p>
+        <a href="https://www.youtube.com/watch?v=example" target="_blank" rel="noopener noreferrer">Video Demonstration</a> | 
+        <a href="attributions.html">Attributions</a>
+    </p>
+</footer>
+
+<script>
+  // Parse and display URLSearchParams on form action page
+  const params = new URLSearchParams(window.location.search);
+  const displayDiv = document.getElementById('results-display');
+  
+  if (params.toString() === '') {
+    displayDiv.innerHTML = '<p>No form data detected.</p>';
+  } else {
+    let output = '<ul style="list-style: none;">';
+    for (const [key, value] of params.entries()) {
+      const formattedKey = key.charAt(0).toUpperCase() + key.slice(1);
+      output += `<li style="margin-bottom: 0.5rem;"><strong>${formattedKey}:</strong> ${decodeURIComponent(value)}</li>`;
+    }
+    output += '</ul>';
+    displayDiv.innerHTML = output;
+  }
+</script>
+
+</body>
+</html>
