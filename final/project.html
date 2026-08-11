@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse completed software, web development, and IoT projects by Kairos Waves Technologies.">
+    <meta name="author" content="Ongom Ronald">
+    
+    <meta property="og:title" content="Projects | Kairos Waves Technologies">
+    <meta property="og:description" content="Explore our portfolio of successful technology solutions and web applications.">
+    <meta property="og:image" content="https://ronaldongom.github.io/wdd231/final/images/kairos-waves.webp">
+    <meta property="og:url" content="https://ronaldongom.github.io/wdd231/final/project.html">
+    <meta property="og:type" content="website">
+
+    <title>Projects Portfolio | Kairos Waves Technologies</title>
+    <link rel="icon" type="image/webp" href="images/favicon.webp">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script type="module" src="scripts/project.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to Main Content</a>
+
+<header>
+    <div class="logo-area">
+        <h1>Kairos<span>Waves</span></h1>
+        <p class="page-title">Projects</p>
+    </div>
+    <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">&#9776;</button>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="main-content">
+    <section class="hero">
+        <h2>Project Portfolio</h2>
+        <p>Explore our dynamically loaded catalog of successful engineering solutions across software, web development, and hardware.</p>
+    </section>
+
+    <!-- Filter Buttons utilizing Array Methods -->
+    <div style="text-align: center; margin-bottom: 2rem;">
+        <button class="btn filter-btn" data-category="All" style="margin: 0.25rem;">All</button>
+        <button class="btn filter-btn" data-category="Software" style="margin: 0.25rem;">Software</button>
+        <button class="btn filter-btn" data-category="Web Development" style="margin: 0.25rem;">Web Development</button>
+        <button class="btn filter-btn" data-category="IoT & Hardware" style="margin: 0.25rem;">IoT & Hardware</button>
+        <button class="btn filter-btn" data-category="Cybersecurity" style="margin: 0.25rem;">Cybersecurity</button>
+    </div>
+
+    <!-- Dynamic 15+ items container -->
+    <div id="projects-container" class="grid-container">
+        <!-- Dynamically injected via projects.js -->
+    </div>
+
+    <!-- Modal Dialog Requirement -->
+    <dialog id="project-modal">
+        <div id="modal-body"></div>
+        <button id="close-modal-btn" class="btn close-modal">Close Window</button>
+    </dialog>
+</main>
+
+<footer>
+    <p>&copy; 2026 Kairos Waves Technologies | Ongom Ronald | WDD 231</p>
+    <p>
+        <a href="https://www.youtube.com/watch?v=example" target="_blank" rel="noopener noreferrer">Video Demonstration</a> | 
+        <a href="attributions.html">Attributions</a>
+    </p>
+</footer>
+
+</body>
+</html>

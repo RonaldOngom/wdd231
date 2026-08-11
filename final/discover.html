@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover community initiatives, technology showcases, and local innovation events hosted by Kairos Waves Technologies[cite: 1].">
+    <meta name="author" content="Ongom Ronald">
+    
+    <meta property="og:title" content="Discover | Kairos Waves Technologies">
+    <meta property="og:description" content="Explore local tech community engagements and activities.">
+    <meta property="og:image" content="https://ronaldongom.github.io/wdd231/final/images/kairos-waves.webp">
+    <meta property="og:url" content="https://ronaldongom.github.io/wdd231/final/discover.html">
+    <meta property="og:type" content="website">
+
+    <title>Discover | Kairos Waves Technologies</title>
+    <link rel="icon" type="image/webp" href="images/favicon.webp">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/discover.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to Main Content</a>
+
+<header>
+    <div class="logo-area">
+        <h1>Kairos<span>Waves</span></h1>
+        <p class="page-title">Discover</p>
+    </div>
+    <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">&#9776;</button>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main id="main-content" class="discover-layout">
+    
+    <!-- Sidebar: Demographics & Local Storage Message -->
+    <aside class="discover-sidebar">
+        <h3>Community Hub</h3>
+        <p id="visit-message" style="margin-bottom: 1.5rem; font-weight: 500; color: #333;"></p>
+        <h4>Key Highlights</h4>
+        <ul>
+            <li>Free Community IT Clinics</li>
+            <li>Youth Software Bootcamps</li>
+            <li>Open Source Hackathons</li>
+            <li>Digital Literacy Programs</li>
+        </ul>
+    </aside>
+
+    <!-- Main Content: Image Gallery with Lazy Loading -->
+    <section class="gallery-content">
+        <h2>Community & Tech Gallery</h2>
+        <p>Explore visual snapshots of our technical workshops, volunteer outreach, and collaborative innovation projects across the region.</p>
+        
+        <div class="grid-container">
+            <div class="card">
+                <img src="images/placeholder.webp" data-src="images/tech-workshop.webp" alt="Coding workshop session with students" loading="lazy">
+                <p>Youth Web Development Training Session</p>
+            </div>
+            <div class="card">
+                <img src="images/placeholder.webp" data-src="images/hardware-lab.webp" alt="Hardware repair lab setup" loading="lazy">
+                <p>Computer Repair & Diagnostics Lab</p>
+            </div>
+            <div class="card">
+                <img src="images/placeholder.webp" data-src="images/community-outreach.webp" alt="Community volunteer outreach" loading="lazy">
+                <p>Community Technology Volunteer Outreach</p>
+            </div>
+            <div class="card">
+                <img src="images/placeholder.webp" data-src="images/networking.webp" alt="Network server setup" loading="lazy">
+                <p>Enterprise Network Installation Hub</p>
+            </div>
+            <div class="card">
+                <img src="images/placeholder.webp" data-src="images/software-team.webp" alt="Software engineering team collaborating" loading="lazy">
+                <p>Software Engineering Team Coding Sprint</p>
+            </div>
+            <div class="card">
+                <img src="images/placeholder.webp" data-src="images/exhibition.webp" alt="Tech exhibition display" loading="lazy">
+                <p>Regional Innovation & Tech Exhibition</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Kairos Waves Technologies | Ongom Ronald | WDD 231</p>
+    <p>
+        <a href="https://www.youtube.com/watch?v=example" target="_blank" rel="noopener noreferrer">Video Demonstration</a> | 
+        <a href="attributions.html">Attributions</a>
+    </p>
+</footer>
+
+</body>
+</html>
