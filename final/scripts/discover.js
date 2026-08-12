@@ -1,3 +1,5 @@
+import './main.js';
+
 function initDiscover() {
   const visitMessage = document.getElementById('visit-message');
   if (visitMessage) {
@@ -22,7 +24,9 @@ function initDiscover() {
 }
 
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initDiscover);
+  document.addEventListener('DOMContentLoaded', () => {
+    initDiscover();
+  });
 } else {
   initDiscover();
 }

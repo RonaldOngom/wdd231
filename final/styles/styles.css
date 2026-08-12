@@ -393,6 +393,12 @@ footer a {
   gap: 2rem;
 }
 
+.discover-layout > h1 {
+  grid-column: 1 / -1;
+  color: var(--primary-dark);
+  text-align: center;
+}
+
 .discover-sidebar {
   background-color: #FFFFFF;
   padding: 1.5rem;

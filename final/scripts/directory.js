@@ -1,3 +1,5 @@
+import './main.js';
+
 function initDirectory() {
   const gridView = document.getElementById('grid-view');
   const listView = document.getElementById('list-view');
@@ -23,7 +25,7 @@ function initDirectory() {
   async function loadDirectory() {
     let directory;
     try {
-      const response = await fetch('../data/directory.json');
+      const response = await fetch('data/directory.json');
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -86,7 +88,9 @@ function initDirectory() {
 }
 
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initDirectory);
+  document.addEventListener('DOMContentLoaded', () => {
+    initDirectory();
+  });
 } else {
   initDirectory();
 }
