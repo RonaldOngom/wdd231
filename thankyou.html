@@ -3,23 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Credits for fonts, images, and development resources used to build the Kairos Waves Technologies final project website.">
+    <meta name="description" content="Form submission confirmation page for Kairos Waves Technologies.">
     <meta name="author" content="Ongom Ronald">
-
-    <meta property="og:title" content="Kairos Waves Technologies | Resource Credits">
-    <meta property="og:description" content="Review credits for the fonts, images, and development resources used on this website.">
+    
+    <meta property="og:title" content="Kairos Waves Technologies | Inquiry Confirmed">
+    <meta property="og:description" content="Your inquiry has been received by Kairos Waves Technologies; review your submitted details here.">
     <meta property="og:image" content="https://ronaldongom.github.io/wdd231/final/images/og-image.webp">
-    <meta property="og:url" content="https://ronaldongom.github.io/wdd231/final/attributions.html">
+    <meta property="og:url" content="https://ronaldongom.github.io/wdd231/final/thankyou.html">
     <meta property="og:type" content="website">
-
-    <title>Attributions | Kairos Waves Technologies</title>
+    <title>Submission Confirmed | Kairos Waves Technologies</title>
     <link rel="icon" type="image/webp" href="images/favicon.webp">
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
     <script type="module" src="scripts/main.js"></script>
@@ -30,7 +26,7 @@
 <header>
     <div class="logo-area">
         <p class="site-name">Kairos<span>Waves</span></p>
-        <p class="page-title">Attributions</p>
+        <p class="page-title">Thank You</p>
     </div>
     <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">&#9776;</button>
     <nav>
@@ -43,26 +39,32 @@
         </ul>
     </nav>
 </header>
+
 <main id="main-content">
     <section class="hero">
-        <h1>Attributions</h1>
-        <p>Resources and assets used in the development of this website.</p>
-        <figure class="hero-image attribution-image">
-            <img src="images/kairos-waves.webp" width="320" height="320" alt="Kairos Waves Technologies team collaborating on a digital project">
-            <figcaption>Featured Kairos Waves Technologies project collaboration.</figcaption>
-        </figure>
+        <h1>Inquiry Received Successfully</h1>
+        <p>Thank you for reaching out. Here are the details of your submitted inquiry:</p>
     </section>
-    <div class="card attribution-card">
-        <h2>Font Credits</h2>
-        <p>Poppins and Roboto fonts provided by Google Fonts.</p>
-        <h2>Image Credits</h2>
-        <p>Website hero and project imagery used to illustrate project sections and interface examples.</p>
-        <h2>Icon Credits</h2>
-        <p>The hamburger menu icon uses a standard HTML entity without external icon libraries.</p>
+    <h2 class="section-heading">Submission Details</h2>
+
+    <div class="card results-card">
+        <h3>Submitted Information Summary</h3>
+        <div id="results-display" class="results-display"></div>
+        <div class="results-actions">
+            <a href="index.html" class="btn">Return to Home</a>
+        </div>
     </div>
 </main>
+
 <footer>
     <p>&copy; 2026 Kairos Waves Technologies | Ongom Ronald | WDD 231</p>
+    <p>
+        <a href="https://youtu.be/8E06mWWL840" target="_blank" rel="noopener noreferrer">Video Demonstration</a> | 
+        <a href="attributions.html">Attributions</a>
+    </p>
 </footer>
+
+<script type="module" src="scripts/thankyou.js"></script>
+
 </body>
 </html>

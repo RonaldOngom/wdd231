@@ -3,26 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Credits for fonts, images, and development resources used to build the Kairos Waves Technologies final project website.">
+    <meta name="description" content="Browse the technical departments, support teams, and partner hubs of Kairos Waves Technologies.">
     <meta name="author" content="Ongom Ronald">
-
-    <meta property="og:title" content="Kairos Waves Technologies | Resource Credits">
-    <meta property="og:description" content="Review credits for the fonts, images, and development resources used on this website.">
+    
+    <meta property="og:title" content="Kairos Waves Technologies | Team Directory">
+    <meta property="og:description" content="Find the technical departments, consulting teams, and support hubs at Kairos Waves Technologies.">
     <meta property="og:image" content="https://ronaldongom.github.io/wdd231/final/images/og-image.webp">
-    <meta property="og:url" content="https://ronaldongom.github.io/wdd231/final/attributions.html">
+    <meta property="og:url" content="https://ronaldongom.github.io/wdd231/final/directory.html">
     <meta property="og:type" content="website">
 
-    <title>Attributions | Kairos Waves Technologies</title>
+    <title>Directory | Kairos Waves Technologies</title>
     <link rel="icon" type="image/webp" href="images/favicon.webp">
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/directory.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to Main Content</a>
@@ -30,7 +27,7 @@
 <header>
     <div class="logo-area">
         <p class="site-name">Kairos<span>Waves</span></p>
-        <p class="page-title">Attributions</p>
+        <p class="page-title">Directory</p>
     </div>
     <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">&#9776;</button>
     <nav>
@@ -43,26 +40,38 @@
         </ul>
     </nav>
 </header>
+
 <main id="main-content">
     <section class="hero">
-        <h1>Attributions</h1>
-        <p>Resources and assets used in the development of this website.</p>
-        <figure class="hero-image attribution-image">
-            <img src="images/kairos-waves.webp" width="320" height="320" alt="Kairos Waves Technologies team collaborating on a digital project">
-            <figcaption>Featured Kairos Waves Technologies project collaboration.</figcaption>
-        </figure>
+        <h1>Organization Directory</h1>
+        <p>Connect directly with our specialized technical desks, consulting teams, and service hubs.</p>
     </section>
-    <div class="card attribution-card">
-        <h2>Font Credits</h2>
-        <p>Poppins and Roboto fonts provided by Google Fonts.</p>
-        <h2>Image Credits</h2>
-        <p>Website hero and project imagery used to illustrate project sections and interface examples.</p>
-        <h2>Icon Credits</h2>
-        <p>The hamburger menu icon uses a standard HTML entity without external icon libraries.</p>
+
+    <!-- View Switcher Controls -->
+    <div class="directory-controls">
+        <button id="grid-view" class="btn">Grid View</button>
+        <button id="list-view" class="btn">List View</button>
     </div>
+
+    <!-- Directory Container Loaded Dynamically via JS -->
+    <div id="directory-container" class="grid-container">
+        <!-- Dynamically injected directory entries -->
+    </div>
+
+    <!-- Modal for Detailed Department View -->
+    <dialog id="directory-modal">
+        <div id="modal-body"></div>
+        <button id="close-modal-btn" class="btn close-modal">Close Window</button>
+    </dialog>
 </main>
+
 <footer>
     <p>&copy; 2026 Kairos Waves Technologies | Ongom Ronald | WDD 231</p>
+    <p>
+        <a href="https://youtu.be/8E06mWWL840" target="_blank" rel="noopener noreferrer">Video Demonstration</a> | 
+        <a href="attributions.html">Attributions</a>
+    </p>
 </footer>
+
 </body>
 </html>

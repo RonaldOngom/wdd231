@@ -1,4 +1,4 @@
-/* normalize.css for final project pages */
+/* normalize.css copied from final/styles */
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -23,9 +23,7 @@ h3,
 h4,
 h5,
 h6,
-p,
-ul,
-ol {
+p,ul,ol {
   margin: 0;
   padding: 0;
 }
