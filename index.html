@@ -1,161 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>WDD231 | Ronald Ongom | Home</title>
-
-    <meta name="description"
-        content="WDD231 Course Home Page for Ronald Ongom showcasing web development assignments, projects and programming courses.">
-
-    <meta name="author" content="Ronald Ongom">
-
-    <meta property="og:title" content="WDD231 | Ronald Ongom | Home">
-    <meta property="og:description"
-        content="Ronald Ongom's WDD231 course home page, featuring web development assignments and programming courses.">
-    <meta property="og:image" content="https://ronaldongom.github.io/wdd231/images/logo.svg">
-    <meta property="og:url" content="https://ronaldongom.github.io/wdd231/index.html">
+    <meta name="description" content="Kairos Waves Technologies provides professional software development, web design, IT consulting, and IoT solutions.">
+    <meta name="author" content="Ongom Ronald">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Kairos Waves Technologies | Digital Innovation">
+    <meta property="og:description" content="Innovative digital solutions, web development, IT consulting, and connected technology services.">
+    <meta property="og:image" content="https://ronaldongom.github.io/wdd231/final/images/og-image.webp">
+    <meta property="og:url" content="https://ronaldongom.github.io/wdd231/final/index.html">
     <meta property="og:type" content="website">
 
-    <link rel="canonical" href="https://ronaldongom.github.io/wdd231/index.html">
+    <title>Home | Kairos Waves Technologies</title>
 
-    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="images/favicon.webp">
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
-
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/date.js" defer></script>
-    <script src="scripts/course.js" defer></script>
-
+    <link rel="stylesheet" href="styles/styles.css">
+    <script type="module" src="scripts/main.js"></script>
 </head>
-
 <body>
+<a class="skip-link" href="#main-content">Skip to Main Content</a>
 
-    <header>
-
-        <div class="logo">
-
-            <img src="images/logo.svg" alt="Website Logo" width="60" height="60">
-
-            <span>Ronald Ongom</span>
-
+<header>
+    <div class="logo-area">
+        <div class="brand">
+            <span class="site-name">Kairos<span>Waves</span></span>
+            <p class="page-title">Home</p>
         </div>
+    </div>
+    <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">&#9776;</button>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <button id="menuButton" aria-label="Open navigation menu">
-            ☰
-        </button>
-
-        <nav id="navigation">
-
-            <a href="index.html" class="active" aria-current="page">Home</a>
-
-            <a href="chamber/">Chamber</a>
-
-            <a href="final/">Final</a>
-
-        </nav>
-
-    </header>
-
-    <main>
-
-        <h1>Home</h1>
-
-        <div class="grid">
-
-            <section class="card">
-
-                <h2>About Me</h2>
-
-                <p>
-
-                    My name is Ronald Ongom from Uganda.
-
-                    I am pursuing a Software Development degree through BYU–Pathway Worldwide.
-
-                    I enjoy web development, software engineering, networking and cybersecurity.
-
-                </p>
-
-            </section>
-
-            <section class="card">
-
-                <h2>Student Photo</h2>
-
-                <img src="images/profile.webp" alt="Ronald Ongom" loading="lazy">
-
-            </section>
-
+<main id="main-content">
+    <section class="hero">
+        <div class="hero-copy">
+            <h1>Kairos Waves Technologies</h1>
+            <h2>Shaping the Future with Digital Innovation</h2>
+            <p>We deliver elite software development, robust cybersecurity, responsive web engineering, and custom IoT systems tailored to your organizational goals.</p>
+            <a href="services.html" class="btn">Explore Our Services</a>
         </div>
+        <div class="hero-images">
+            <figure class="hero-image">
+                <img src="images/kairos-waves.webp" width="320" height="320" alt="Team collaborating on a software and IoT project" loading="lazy">
+            </figure>
+            <figure class="hero-image secondary-image">
+                <img src="images/software-team.webp" width="900" height="604" alt="Developers reviewing code together in a collaborative workspace" loading="lazy">
+            </figure>
+        </div>
+    </section>
 
-        <section class="certificate">
-
-            <h2>Web & Computer Programming Certificate</h2>
-
-            <div class="buttons">
-
-                <button id="all">All Courses</button>
-
-                <button id="wdd">WDD Courses</button>
-
-                <button id="cse">CSE Courses</button>
-
+    <section>
+        <h2 class="section-heading">Core Expertise</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>Modern, responsive, and high-performance websites engineered with clean semantic standards and zero bulky frameworks.</p>
+                <a href="services.html" class="btn">Learn More</a>
             </div>
-
-            <div id="courses"></div>
-
-            <p id="credits"></p>
-
-        </section>
-
-    </main>
-
-    <footer>
-
-        <div class="social">
-
-            <a href="https://github.com/RonaldOngom" target="_blank" rel="noopener noreferrer"
-                aria-label="Visit Ronald Ongom's GitHub Profile">
-                GitHub
-            </a>
-
-            <a href="https://www.linkedin.com/in/ongom-ronald-2a228717b" target="_blank" rel="noopener noreferrer"
-                aria-label="Visit Ronald Ongom's LinkedIn Profile">
-                LinkedIn
-            </a>
-
-            <a href="mailto:apostleronaldongom@outlook.com" aria-label="Send an email to Ronald Ongom">
-                Email
-            </a>
-
+            <div class="card">
+                <h3>Custom Software</h3>
+                <p>Scalable cloud ERPs, educational management portals, and automated business utilities built to exact specifications.</p>
+                <a href="services.html" class="btn">Learn More</a>
+            </div>
+            <div class="card">
+                <h3>IoT & Hardware</h3>
+                <p>Smart automation hubs, agricultural monitoring systems, and embedded microcontroller solutions.</p>
+                <a href="services.html" class="btn">Learn More</a>
+            </div>
         </div>
+    </section>
 
-        <p>
+    <section class="spaced-section">
+        <h2 class="section-heading">Request Consultation</h2>
+        <form action="thankyou.html" method="GET">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="service">Interested Service</label>
+                <select id="service" name="service">
+                    <option value="Web Development">Web Development</option>
+                    <option value="Software Systems">Software Systems</option>
+                    <option value="IoT Hardware">IoT Hardware</option>
+                    <option value="Cybersecurity">Cybersecurity</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Project Details</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn">Submit Inquiry</button>
+        </form>
+    </section>
+</main>
 
-            ©
-
-            <span id="currentyear"></span>
-
-            Ronald Ongom | Uganda
-
-        </p>
-
-        <p id="lastModified"></p>
-
-    </footer>
-
+<footer>
+    <p>&copy; 2026 Kairos Waves Technologies | Ongom Ronald | WDD 231</p>
+    <p>
+        <a href="https://youtu.be/8E06mWWL840" target="_blank" rel="noopener noreferrer">Video Demonstration</a> | 
+        <a href="attributions.html">Attributions</a>
+    </p>
+</footer>
 
 </body>
-
 </html>

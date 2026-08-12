@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "name": "Cloud Infrastructure Division",
+    "department": "Engineering",
+    "email": "cloud@kairowaves.tech",
+    "phone": "+256 414 123 001",
+    "location": "Floor 3, Block A",
+    "description": "Manages scalable cloud deployments, server orchestration, and DevOps pipelines for enterprise clients."
+  },
+  {
+    "id": 2,
+    "name": "Web Solutions Studio",
+    "department": "Design & Frontend",
+    "email": "web@kairowaves.tech",
+    "phone": "+256 414 123 002",
+    "location": "Floor 2, Block B",
+    "description": "Delivers responsive websites, e-commerce platforms, and progressive web applications."
+  },
+  {
+    "id": 3,
+    "name": "Cybersecurity Operations Center",
+    "department": "Security",
+    "email": "security@kairowaves.tech",
+    "phone": "+256 414 123 003",
+    "location": "Floor 1, Block A",
+    "description": "Provides penetration testing, vulnerability assessments, and 24/7 threat monitoring services."
+  },
+  {
+    "id": 4,
+    "name": "IoT & Embedded Systems Lab",
+    "department": "Hardware",
+    "email": "iot@kairowaves.tech",
+    "phone": "+256 414 123 004",
+    "location": "Ground Floor, Block C",
+    "description": "Develops sensor networks, microcontroller firmware, and smart automation solutions."
+  },
+  {
+    "id": 5,
+    "name": "Data Analytics & AI Unit",
+    "department": "Research",
+    "email": "data@kairowaves.tech",
+    "phone": "+256 414 123 005",
+    "location": "Floor 4, Block A",
+    "description": "Builds machine learning models, data pipelines, and business intelligence dashboards."
+  },
+  {
+    "id": 6,
+    "name": "Mobile Development Team",
+    "department": "Engineering",
+    "email": "mobile@kairowaves.tech",
+    "phone": "+256 414 123 006",
+    "location": "Floor 2, Block A",
+    "description": "Creates cross-platform and native mobile applications for iOS and Android ecosystems."
+  },
+  {
+    "id": 7,
+    "name": "IT Consulting Desk",
+    "department": "Advisory",
+    "email": "consulting@kairowaves.tech",
+    "phone": "+256 414 123 007",
+    "location": "Floor 3, Block B",
+    "description": "Offers strategic technology planning, digital transformation, and IT infrastructure audits."
+  },
+  {
+    "id": 8,
+    "name": "Quality Assurance Lab",
+    "department": "Testing",
+    "email": "qa@kairowaves.tech",
+    "phone": "+256 414 123 008",
+    "location": "Floor 1, Block C",
+    "description": "Executes automated and manual testing, performance benchmarking, and accessibility audits."
+  },
+  {
+    "id": 9,
+    "name": "Technical Support Hub",
+    "department": "Operations",
+    "email": "support@kairowaves.tech",
+    "phone": "+256 414 123 009",
+    "location": "Ground Floor, Block A",
+    "description": "Provides 24/7 customer support, ticket management, and remote troubleshooting services."
+  },
+  {
+    "id": 10,
+    "name": "Training & Capacity Building",
+    "department": "Education",
+    "email": "training@kairowaves.tech",
+    "phone": "+256 414 123 010",
+    "location": "Floor 2, Block C",
+    "description": "Conducts coding bootcamps, corporate tech training, and certification programs."
+  },
+  {
+    "id": 11,
+    "name": "Blockchain & Web3 Unit",
+    "department": "Innovation",
+    "email": "web3@kairowaves.tech",
+    "phone": "+256 414 123 011",
+    "location": "Floor 4, Block B",
+    "description": "Explores decentralized applications, smart contracts, and blockchain integration services."
+  },
+  {
+    "id": 12,
+    "name": "Project Management Office",
+    "department": "Delivery",
+    "email": "pm@kairowaves.tech",
+    "phone": "+256 414 123 012",
+    "location": "Floor 3, Block C",
+    "description": "Oversees agile project delivery, resource allocation, and client communication."
+  },
+  {
+    "id": 13,
+    "name": "Graphic & Motion Design",
+    "department": "Creative",
+    "email": "design@kairowaves.tech",
+    "phone": "+256 414 123 013",
+    "location": "Floor 1, Block B",
+    "description": "Produces brand identities, UI/UX prototypes, motion graphics, and marketing visuals."
+  },
+  {
+    "id": 14,
+    "name": "DevSecOps Integration Team",
+    "department": "Security",
+    "email": "devsecops@kairowaves.tech",
+    "phone": "+256 414 123 014",
+    "location": "Floor 2, Block A",
+    "description": "Embeds security practices into CI/CD pipelines and automates compliance checks."
+  },
+  {
+    "id": 15,
+    "name": "Partner & Alliances Desk",
+    "department": "Business Development",
+    "email": "partners@kairowaves.tech",
+    "phone": "+256 414 123 015",
+    "location": "Floor 4, Block C",
+    "description": "Manages vendor relationships, channel partnerships, and strategic alliance negotiations."
+  },
+  {
+    "id": 16,
+    "name": "Research & Innovation Lab",
+    "department": "R&D",
+    "email": "research@kairowaves.tech",
+    "phone": "+256 414 123 016",
+    "location": "Floor 4, Block A",
+    "description": "Prototypes emerging technologies, publishes technical papers, and runs internal hackathons."
+  }
+]
