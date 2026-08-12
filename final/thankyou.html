@@ -60,21 +60,34 @@
 </footer>
 
 <script>
-  // Parse and display URLSearchParams on form action page
-  const params = new URLSearchParams(window.location.search);
-  const displayDiv = document.getElementById('results-display');
-  
-  if (params.toString() === '') {
-    displayDiv.innerHTML = '<p>No form data detected.</p>';
-  } else {
-    let output = '<ul style="list-style: none;">';
-    for (const [key, value] of params.entries()) {
-      const formattedKey = key.charAt(0).toUpperCase() + key.slice(1);
-      output += `<li style="margin-bottom: 0.5rem;"><strong>${formattedKey}:</strong> ${decodeURIComponent(value)}</li>`;
+    // Parse and display URLSearchParams on form action page
+    const params = new URLSearchParams(window.location.search);
+    const displayDiv = document.getElementById('results-display');
+    const membershipMap = {
+        np: 'NP Membership',
+        bronze: 'Bronze Membership',
+        silver: 'Silver Membership',
+        gold: 'Gold Membership',
+        '': 'Not Selected'
+    };
+
+    if (!displayDiv) {
+        // nothing to display
+    } else if (params.toString() === '') {
+        displayDiv.innerHTML = '<p>No form data detected.</p>';
+    } else {
+        let output = '<ul style="list-style: none;">';
+        for (const [key, rawValue] of params.entries()) {
+            let value = rawValue;
+            if (key === 'membership') {
+                value = membershipMap[rawValue] || rawValue;
+            }
+            const formattedKey = key.charAt(0).toUpperCase() + key.slice(1);
+            output += `<li style="margin-bottom: 0.5rem;"><strong>${formattedKey}:</strong> ${decodeURIComponent(value)}</li>`;
+        }
+        output += '</ul>';
+        displayDiv.innerHTML = output;
     }
-    output += '</ul>';
-    displayDiv.innerHTML = output;
-  }
 </script>
 
 </body>
