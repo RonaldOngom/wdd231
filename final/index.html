@@ -16,23 +16,26 @@
     <title>Home | Kairos Waves Technologies</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/favicon.webp" href="images/favicon.webp">
+    <link rel="icon" type="image/webp" href="images/favicon.webp">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <script type="module" src="scripts/main.js" defer></script>
+    <script type="module" src="scripts/main.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to Main Content</a>
 
 <header>
     <div class="logo-area">
-        <h1>Kairos<span>Waves</span></h1>
-        <p class="page-title">Home</p>
+        <div class="brand">
+            <span class="site-name">Kairos<span>Waves</span></span>
+            <p class="page-title">Home</p>
+        </div>
     </div>
     <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">&#9776;</button>
     <nav>
@@ -48,13 +51,24 @@
 
 <main id="main-content">
     <section class="hero">
-        <h2>Shaping the Future with Digital Innovation</h2>
-        <p>We deliver elite software development, robust cybersecurity, responsive web engineering, and custom IoT systems tailored to your organizational goals.</p>
-        <a href="services.html" class="btn">Explore Our Services</a>
+        <div class="hero-copy">
+            <h1>Kairos Waves Technologies</h1>
+            <h2>Shaping the Future with Digital Innovation</h2>
+            <p>We deliver elite software development, robust cybersecurity, responsive web engineering, and custom IoT systems tailored to your organizational goals.</p>
+            <a href="services.html" class="btn">Explore Our Services</a>
+        </div>
+        <div class="hero-images">
+            <figure class="hero-image">
+                <img src="images/kairos-waves.webp" alt="Team collaborating on a software and IoT project" loading="lazy">
+            </figure>
+            <figure class="hero-image secondary-image">
+                <img src="images/software-team.webp" alt="Developers reviewing code together in a collaborative workspace" loading="lazy">
+            </figure>
+        </div>
     </section>
 
     <section>
-        <h2 style="text-align: center; color: var(--primary-dark); margin-bottom: 1.5rem;">Core Expertise</h2>
+        <h2 class="section-heading">Core Expertise</h2>
         <div class="grid-container">
             <div class="card">
                 <h3>Web Development</h3>
@@ -74,8 +88,8 @@
         </div>
     </section>
 
-    <section style="margin-top: 3rem;">
-        <h2 style="text-align: center; color: var(--primary-dark); margin-bottom: 1.5rem;">Request Consultation</h2>
+    <section class="spaced-section">
+        <h2 class="section-heading">Request Consultation</h2>
         <form action="thankyou.html" method="GET">
             <div class="form-group">
                 <label for="fullname">Full Name</label>

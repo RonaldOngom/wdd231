@@ -13,9 +13,10 @@
     <meta property="og:type" content="website">
 
     <title>Projects Portfolio | Kairos Waves Technologies</title>
-    <link rel="icon" type="image/favicon.webp" href="images/favicon.webp">
+    <link rel="icon" type="image/webp" href="images/favicon.webp">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <script type="module" src="scripts/project.js" defer></script>
+    <script type="module" src="scripts/project.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to Main Content</a>
@@ -44,12 +45,12 @@
     </section>
 
     <!-- Filter Buttons utilizing Array Methods -->
-    <div style="text-align: center; margin-bottom: 2rem;">
-        <button class="btn filter-btn" data-category="All" style="margin: 0.25rem;">All</button>
-        <button class="btn filter-btn" data-category="Software" style="margin: 0.25rem;">Software</button>
-        <button class="btn filter-btn" data-category="Web Development" style="margin: 0.25rem;">Web Development</button>
-        <button class="btn filter-btn" data-category="IoT & Hardware" style="margin: 0.25rem;">IoT & Hardware</button>
-        <button class="btn filter-btn" data-category="Cybersecurity" style="margin: 0.25rem;">Cybersecurity</button>
+    <div class="filter-bar">
+        <button class="btn filter-btn" data-category="All">All</button>
+        <button class="btn filter-btn" data-category="Software">Software</button>
+        <button class="btn filter-btn" data-category="Web Development">Web Development</button>
+        <button class="btn filter-btn" data-category="IoT & Hardware">IoT & Hardware</button>
+        <button class="btn filter-btn" data-category="Cybersecurity">Cybersecurity</button>
     </div>
 
     <!-- Dynamic 15+ items container -->
