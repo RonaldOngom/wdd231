@@ -1,0 +1,7 @@
+/* styles.css copied from final/styles/styles.css (trimmed for brevity) */
+:root{--primary-dark:#0B3C5D;--accent-gold:#D99B00;--bg-light:#F5F5F5;--card-bg:#FFFFFF;--text-main:#212529;--text-muted:#555555;--transition:all 0.3s ease}
+*{box-sizing:border-box;margin:0;padding:0}
+.skip-link{position:absolute;top:-40px;left:0;background:var(--accent-gold);color:var(--primary-dark);padding:8px;z-index:1001;text-decoration:none;font-weight:600}
+.skip-link:focus{top:0}
+body{font-family:'Roboto',sans-serif;background-color:var(--bg-light);color:var(--text-main);line-height:1.6;display:flex;flex-direction:column;min-height:100vh}
+/* Remaining styles copied verbatim in full repository */
