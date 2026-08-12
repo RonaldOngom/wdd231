@@ -6,13 +6,16 @@
     <meta name="description" content="Form submission confirmation page for Kairos Waves Technologies.">
     <meta name="author" content="Ongom Ronald">
     
-    <meta property="og:title" content="Submission Confirmed | Kairos Waves Technologies">
-    <meta property="og:description" content="Form submission confirmation page for Kairos Waves Technologies.">
+    <meta property="og:title" content="Kairos Waves Technologies | Inquiry Confirmed">
+    <meta property="og:description" content="Your inquiry has been received by Kairos Waves Technologies; review your submitted details here.">
     <meta property="og:image" content="https://ronaldongom.github.io/wdd231/final/images/kairos-waves.webp">
     <meta property="og:url" content="https://ronaldongom.github.io/wdd231/final/thankyou.html">
     <meta property="og:type" content="website">
     <title>Submission Confirmed | Kairos Waves Technologies</title>
     <link rel="icon" type="image/webp" href="images/favicon.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
     <script type="module" src="scripts/main.js"></script>
@@ -22,7 +25,7 @@
 
 <header>
     <div class="logo-area">
-        <h1>Kairos<span>Waves</span></h1>
+        <p class="site-name">Kairos<span>Waves</span></p>
         <p class="page-title">Thank You</p>
     </div>
     <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">&#9776;</button>
@@ -39,7 +42,7 @@
 
 <main id="main-content">
     <section class="hero">
-        <h2>Inquiry Received Successfully</h2>
+        <h1>Inquiry Received Successfully</h1>
         <p>Thank you for reaching out. Here are the details of your submitted inquiry:</p>
     </section>
 
@@ -60,36 +63,7 @@
     </p>
 </footer>
 
-<script>
-    // Parse and display URLSearchParams on form action page
-    const params = new URLSearchParams(window.location.search);
-    const displayDiv = document.getElementById('results-display');
-    const membershipMap = {
-        np: 'NP Membership',
-        bronze: 'Bronze Membership',
-        silver: 'Silver Membership',
-        gold: 'Gold Membership',
-        '': 'Not Selected'
-    };
-
-    if (!displayDiv) {
-        // nothing to display
-    } else if (params.toString() === '') {
-        displayDiv.innerHTML = '<p>No form data detected.</p>';
-    } else {
-        let output = '<ul class="results-list">';
-        for (const [key, rawValue] of params.entries()) {
-            let value = rawValue;
-            if (key === 'membership') {
-                value = membershipMap[rawValue] || rawValue;
-            }
-            const formattedKey = key.charAt(0).toUpperCase() + key.slice(1);
-            output += `<li class="results-list-item"><strong>${formattedKey}:</strong> ${decodeURIComponent(value)}</li>`;
-        }
-        output += '</ul>';
-        displayDiv.innerHTML = output;
-    }
-</script>
+<script type="module" src="scripts/thankyou.js"></script>
 
 </body>
 </html>
