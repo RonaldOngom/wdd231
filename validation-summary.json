@@ -1,0 +1,88 @@
+{
+  "chamber/directory.html": [
+    {
+      "type": "info",
+      "message": "Section lacks heading. Consider using \u201ch2\u201d-\u201ch6\u201d elements to add identifying headings to all sections, or else use a \u201cdiv\u201d element instead for any cases where no heading is needed.",
+      "lastLine": 230,
+      "firstColumn": 9
+    }
+  ],
+  "chamber/discover.html": [
+    {
+      "type": "info",
+      "message": "Section lacks heading. Consider using \u201ch2\u201d-\u201ch6\u201d elements to add identifying headings to all sections, or else use a \u201cdiv\u201d element instead for any cases where no heading is needed.",
+      "lastLine": 133,
+      "firstColumn": 5
+    },
+    {
+      "type": "info",
+      "message": "Section lacks heading. Consider using \u201ch2\u201d-\u201ch6\u201d elements to add identifying headings to all sections, or else use a \u201cdiv\u201d element instead for any cases where no heading is needed.",
+      "lastLine": 187,
+      "firstColumn": 5
+    },
+    {
+      "type": "info",
+      "message": "Section lacks heading. Consider using \u201ch2\u201d-\u201ch6\u201d elements to add identifying headings to all sections, or else use a \u201cdiv\u201d element instead for any cases where no heading is needed.",
+      "lastLine": 206,
+      "firstColumn": 5
+    }
+  ],
+  "chamber/index.html": [],
+  "chamber/join.html": [
+    {
+      "type": "info",
+      "message": "The \u201cdialog\u201d role is unnecessary for element \u201cdialog\u201d.",
+      "lastLine": 329,
+      "firstColumn": 1
+    },
+    {
+      "type": "info",
+      "message": "The \u201cdialog\u201d role is unnecessary for element \u201cdialog\u201d.",
+      "lastLine": 355,
+      "firstColumn": 1
+    },
+    {
+      "type": "info",
+      "message": "The \u201cdialog\u201d role is unnecessary for element \u201cdialog\u201d.",
+      "lastLine": 381,
+      "firstColumn": 1
+    },
+    {
+      "type": "info",
+      "message": "The \u201cdialog\u201d role is unnecessary for element \u201cdialog\u201d.",
+      "lastLine": 407,
+      "firstColumn": 1
+    }
+  ],
+  "chamber/siteplan.html": [],
+  "chamber/thankyou.html": [],
+  "final/attributions.html": [],
+  "final/directory.html": [],
+  "final/discover.html": [],
+  "final/index.html": [],
+  "final/project.html": [
+    {
+      "type": "info",
+      "message": "The \u201cdialog\u201d role is unnecessary for element \u201cdialog\u201d.",
+      "lastLine": 65,
+      "firstColumn": 5
+    }
+  ],
+  "final/services.html": [
+    {
+      "type": "error",
+      "message": "The heading \u201ch3\u201d (with computed level 3) follows the heading \u201ch1\u201d (with computed level 1), skipping 1 heading level.",
+      "lastLine": 52,
+      "firstColumn": 13
+    }
+  ],
+  "final/thankyou.html": [
+    {
+      "type": "error",
+      "message": "The heading \u201ch3\u201d (with computed level 3) follows the heading \u201ch1\u201d (with computed level 1), skipping 1 heading level.",
+      "lastLine": 50,
+      "firstColumn": 9
+    }
+  ],
+  "index.html": []
+}
