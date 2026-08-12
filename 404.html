@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Page not found</title>
+  <meta name="robots" content="noindex">
+  <style>body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:3rem;color:#222}a{color:#0066cc}</style>
+  <script>
+    // Redirect specific legacy paths to the final folder equivalents
+    (function(){
+      try{
+        const p = location.pathname.toLowerCase();
+        // Handle project root under username.github.io/repo
+        if(p.endsWith('/attributions.html') || p.endsWith('/attributions')){
+          // Redirect to the published final page
+          location.replace('/wdd231/final/attributions.html');
+          return;
+        }
+      }catch(e){/* ignore */}
+    })();
+  </script>
+</head>
+<body>
+  <h1>Page not found</h1>
+  <p>The page you requested was not found. You may find it here:</p>
+  <ul>
+    <li><a href="/wdd231/">Home</a></li>
+    <li><a href="/wdd231/final/attributions.html">Attributions (final)</a></li>
+  </ul>
+</body>
+</html>
